@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/my_doctors"
+            android:title="My Doctors"
+            android:icon="@drawable/person"/>
+
+        <item
+            android:id="@+id/medical_resourses"
+            android:title="Medical Resourses"
+            android:icon="@drawable/syringe"/>
+        <item
+            android:id="@+id/payments"
+            android:title="Payments"
+            android:icon="@drawable/payment"/>
+        <item
+            android:id="@+id/medicine_orders"
+            android:title="Medicine Orders"
+            android:icon="@drawable/order"/>
+        <item
+            android:id="@+id/test_booking"
+            android:title="Test Booking"
+            android:icon="@drawable/booking"/>
+        <item
+            android:id="@+id/privacy_policy"
+            android:title="Privacy  Policy"
+            android:icon="@drawable/privacy"/>
+        <item
+            android:id="@+id/help"
+            android:title="Help center"
+            android:icon="@drawable/help"/>
+        <item
+            android:id="@+id/settings"
+            android:title="Settings"
+            android:icon="@drawable/settings"/>
+
+
+    </group>
+
+     <item
+         android:id="@+id/logout"
+         android:title="Log Out"
+         android:icon="@drawable/signout"/>
+</menu>

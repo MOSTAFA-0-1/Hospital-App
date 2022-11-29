@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Hospital</string>
+    <string name="_10_health_cashback_t_c"><![CDATA[+ 10% Health cashback T&C]]></string>
+    <string name="Navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="Navigation_drawer_close">Close Navigation Drawer</string>
+    <string name="payments_refunds"><![CDATA[Payments & Refunds]]></string>
+    <string name="ndoc2">Dr.Pediatrician</string>
+    <string name="doc_des2">Specialist Cardiologist</string>
+    <string name="booking">Book Now</string>
+    <string name="running">100 running</string>
+    <string name="ongoing">500 ongoing</string>
+    <string name="patient">700 patient</string>
+    <string name="services">Services</string>
+    <string name="service1">1. Patient care should be the number one priority.</string>
+    <string name="service2">2. If you run your practice you know how frustrating.</string>
+    <string name="service3">3. That`s why some of appointments reminder system.  </string>
+    <string name="bdes11">Find Trusted Doctors</string>
+    <string name="bdes12">Contrary to popular belief. Lorem ipsum is not simply random text. it has roots in a piece of it over 2000 years old </string>
+    <string name="bbut11">Get Started</string>
+    <string name="skip">Skip</string>
+    <string name="bdes21">Choose Best Doctors</string>
+    <string name="bdes31">Easy Appointments</string>
+</resources>
