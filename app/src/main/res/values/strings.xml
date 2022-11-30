@@ -20,4 +20,65 @@
     <string name="skip">Skip</string>
     <string name="bdes21">Choose Best Doctors</string>
     <string name="bdes31">Easy Appointments</string>
+
+
+    <!--Abdelrahman_Ramadan_adding_their_values-->
+    <!--General strings-->
+    <string name="all_records">All records</string>
+    <string name="new_string">NEW</string>
+
+    <!--First block in orders-->
+    <string name="twentySevenFEB">27\nFEB</string>
+    <string name="first_block_main">Records added by you</string>
+    <string name="first_block_sub">Record for Abdullah mamun</string>
+    <string name="first_block_sub_second">1 Prescription</string>
+
+    <!--Second block in orders-->
+    <string name="twentyEightFEB">28\nFEB</string>
+    <string name="second_block_sub">Record for Abdullah shuvo</string>
+
+    <!--Third block in orders-->
+    <string name="oneOfMar">01\nMAR</string>
+    <string name="third_block_sub">Record for Shurti Kedia</string>
+
+
+    <string name="privacyPolicy">Privacy policy</string>
+    <string name="heading">Doctor Hunt Apps Privacy Policy</string>
+    <string name="para">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words believable. It is a long established fact that reader will distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a morelt is a long established fact that reader will distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more </string>
+    <string name="paraSecond">It is a long established fact that reader distracted by the readable content of a page when looking at its layout. The point of using Lorem ipsum is that it has a morelt is a long established.</string>
+
+    <string name="bullet">•</string>
+    <string name="bulletOnePara">The standard chunk of lorem Ipsum used since 1500s is reproduced below for those interested.</string>
+    <string name="bulletTwoPara">Sections 110.32 and 110.33 from "de Finibus Bonorum et Malorum. The point of using.</string>
+    <string name="bulletThreePara">Lorem Ipsum is that it has a morelt is a long established fact that reader will distracted.</string>
+    <string name="bulletFourPara">The point of using Lorem Ipsum is that it has a morelt is a long established fact that reader will distracted. </string>
+
+    <string name="addRecords">Add records</string>
+    <string name="addMoreImages">+\nAdd more images</string>
+    <string name="recordFor">Record for</string>
+    <string name="pen">🖊️</string>
+    <string name="abdullahMamun">Abdullah Mamun</string>
+    <string name="typeOfRecord">Type of record</string>
+    <string name="report">Report</string>
+    <string name="prescription">Prescription</string>
+    <string name="invoice">Invoice</string>
+    <string name="recordCreatedOn">Record created on</string>
+    <string name="theDataOfCreatingOne">27 Feb, 2021</string>
+    <string name="uploadRecord">Upload record</string>
+
+    <string name="settings">Settings</string>
+    <string name="account_settings">Account settings</string>
+    <string name="change_password">Change password</string>
+    <string name="notifications">Notifications</string>
+    <string name="statistics">Statistics</string>
+    <string name="about_us">About us</string>
+    <string name="more_options">More options</string>
+    <string name="text_messages">Text messages</string>
+    <string name="phone_calls">Phone calls</string>
+    <string name="languages">Languages</string>
+    <string name="english">English</string>
+    <string name="currency">Currency</string>
+    <string name="usd">$-USD</string>
+    <string name="linked_accounts">Linked accounts</string>
+    <string name="facebook_comma_google">Facebook, Google</string>
 </resources>

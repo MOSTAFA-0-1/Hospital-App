@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="Bordergray">#BCBCBC</color>
+    <color name="red">#FF0404</color>
     <color name="shadowgr">#804A4848</color>
     <color name="primary">#53B175</color>
     <color name="purple_200">#FFBB86FC</color>
