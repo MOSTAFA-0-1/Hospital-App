@@ -109,7 +109,7 @@
                 android:layout_height="40dp"
                 android:layout_marginStart="-5dp"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/ic_baseline_favorite_24"
+                android:background="@drawable/favourite"
 
                 tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck"></androidx.appcompat.widget.AppCompatButton>
 
