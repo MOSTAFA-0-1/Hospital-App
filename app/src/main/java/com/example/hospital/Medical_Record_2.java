@@ -7,24 +7,15 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
-import com.google.android.material.bottomsheet.BottomSheetDialog;
-
-public class Medical_Record_1 extends AppCompatActivity {
+public class Medical_Record_2 extends AppCompatActivity {
+    AlertDialog.Builder builder;
     Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_medical_record1);
-        button=findViewById(R.id.button3);
+        setContentView(R.layout.activity_medical_record2);
 
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
 
     }
 }
