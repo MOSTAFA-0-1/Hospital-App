@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".settings"
+    android:background="@drawable/bg_items_removed"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        tools:ignore="UselessParent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="20dp"
+            android:layout_height="21.5555555556dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/arrow_box_rotated"
+            tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="casual"
+            android:paddingStart="5dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="0dp"
+            android:text="@string/settings"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="20dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#677294"
+            android:text="@string/account_settings"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="378dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="20dp"
+            android:gravity="center_vertical"
+            android:text="@string/change_password"
+            app:drawableEndCompat="@drawable/arrow_right"
+            app:drawableStartCompat="@drawable/security"
+            tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck,TextContrastCheck" />
+
+        <TextView
+            android:layout_width="378dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="20dp"
+            android:gravity="center_vertical"
+            android:text="@string/notifications"
+            app:drawableEndCompat="@drawable/arrow_right"
+            app:drawableStartCompat="@drawable/notifications"
+            tools:ignore="TextContrastCheck,TextContrastCheck" />
+
+        <TextView
+            android:layout_width="378dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="20dp"
+            android:gravity="center_vertical"
+            android:text="@string/statistics"
+            app:drawableEndCompat="@drawable/arrow_right"
+            app:drawableStartCompat="@drawable/statistics"
+            tools:ignore="TextContrastCheck,TextContrastCheck" />
+
+        <TextView
+            android:layout_width="378dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="20dp"
+            android:gravity="center_vertical"
+            android:text="@string/about_us"
+            app:drawableEndCompat="@drawable/arrow_right"
+            app:drawableStartCompat="@drawable/about_us"
+            tools:ignore="TextContrastCheck,TextContrastCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#677294"
+            android:layout_marginTop="20dp"
+            android:text="@string/more_options"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Switch
+                android:id="@+id/switch2"
+                android:layout_width="378dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="@string/text_messages"
+                android:textColor="#677294"
+                android:thumbTint="#0ebe7f"
+                tools:ignore="UseSwitchCompatOrMaterialXml,TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+            <Switch
+                android:id="@+id/switch3"
+                android:layout_width="378dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:text="@string/phone_calls"
+                android:textColor="#677294"
+                android:checked="true"
+                android:thumbTint="#0ebe7f"
+                tools:ignore="UseSwitchCompatOrMaterialXml,TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/languages"
+                    android:layout_marginEnd="242dp"/>
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/english"
+                    app:drawableEndCompat="@drawable/arrow_right"
+                    tools:ignore="TextContrastCheck,TextContrastCheck" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/currency"
+                    android:layout_marginEnd="260dp"/>
+
+                <TextView
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/usd"
+                    app:drawableEndCompat="@drawable/arrow_right"
+                    tools:ignore="TextContrastCheck,TextContrastCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/linked_accounts"
+                    android:layout_marginEnd="145dp"/>
+
+                <TextView
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/facebook_comma_google"
+                    app:drawableEndCompat="@drawable/arrow_right"
+                    android:drawablePadding="-100dp"
+                    tools:ignore="TextContrastCheck,TextContrastCheck" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
