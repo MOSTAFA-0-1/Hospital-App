@@ -9,8 +9,13 @@
         <entry key="..\:/3TH Term/Hospital/app/src/main/res/layout/activity_all_records.xml" value="0.36666666666666664" />
         <entry key="..\:/3TH Term/Hospital/app/src/main/res/layout/activity_all_records2.xml" value="0.36666666666666664" />
         <entry key="..\:/3TH Term/Hospital/app/src/main/res/layout/activity_appointment.xml" value="0.36666666666666664" />
+        <entry key="..\:/3TH Term/Hospital/app/src/main/res/layout/activity_calendar.xml" value="0.36666666666666664" />
+        <entry key="..\:/3TH Term/Hospital/app/src/main/res/layout/activity_digits.xml" value="0.36666666666666664" />
         <entry key="..\:/3TH Term/Hospital/app/src/main/res/layout/activity_doctor_details.xml" value="0.24592391304347827" />
+        <entry key="..\:/3TH Term/Hospital/app/src/main/res/layout/activity_forgot.xml" value="0.36666666666666664" />
+        <entry key="..\:/3TH Term/Hospital/app/src/main/res/layout/activity_home.xml" value="0.36666666666666664" />
         <entry key="..\:/3TH Term/Hospital/app/src/main/res/layout/activity_location.xml" value="0.24592391304347827" />
+        <entry key="..\:/3TH Term/Hospital/app/src/main/res/layout/activity_log_in.xml" value="0.36666666666666664" />
         <entry key="..\:/3TH Term/Hospital/app/src/main/res/layout/activity_main.xml" value="0.24592391304347827" />
         <entry key="..\:/3TH Term/Hospital/app/src/main/res/layout/activity_medicines_orders.xml" value="0.24592391304347827" />
         <entry key="..\:/3TH Term/Hospital/app/src/main/res/layout/activity_my_doctor.xml" value="0.36666666666666664" />
@@ -19,7 +24,9 @@
         <entry key="..\:/3TH Term/Hospital/app/src/main/res/layout/activity_popular_doctors.xml" value="0.25" />
         <entry key="..\:/3TH Term/Hospital/app/src/main/res/layout/activity_privacy_policy.xml" value="0.36666666666666664" />
         <entry key="..\:/3TH Term/Hospital/app/src/main/res/layout/activity_profile.xml" value="0.24592391304347827" />
+        <entry key="..\:/3TH Term/Hospital/app/src/main/res/layout/activity_reset.xml" value="0.36666666666666664" />
         <entry key="..\:/3TH Term/Hospital/app/src/main/res/layout/activity_settings.xml" value="0.36666666666666664" />
+        <entry key="..\:/3TH Term/Hospital/app/src/main/res/layout/activity_splash.xml" value="0.36666666666666664" />
         <entry key="..\:/3TH Term/Hospital/app/src/main/res/layout/activity_tests_screen.xml" value="0.17603850050658562" />
         <entry key="..\:/3TH Term/Hospital/app/src/main/res/layout/header_drawer.xml" value="0.25" />
         <entry key="..\:/3TH Term/Hospital/app/src/main/res/layout/single_item.xml" value="0.17603850050658562" />
