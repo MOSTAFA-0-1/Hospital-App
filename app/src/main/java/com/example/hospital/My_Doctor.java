@@ -19,7 +19,7 @@ public class My_Doctor extends AppCompatActivity {
             public void onClick(View v) {
                 isFavourite = !isFavourite;
                 if(isFavourite)
-                    favclick.setColorFilter(getResources().getColor(R.color.purple_700));
+                    favclick.setColorFilter(getResources().getColor(android.R.color.holo_red_dark));
                 else
                     favclick.setColorFilter(getResources().getColor(R.color.white));
 

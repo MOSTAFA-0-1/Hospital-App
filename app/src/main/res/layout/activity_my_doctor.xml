@@ -24,9 +24,9 @@
                     android:layout_height="40dp"
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="10dp"
-                    android:background="@drawable/arrow_back"
-                    tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck"
-                    >
+                    android:background="@drawable/ic_baseline_chevron_left_24"
+                    tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck">
+
                 </androidx.appcompat.widget.AppCompatButton>
                 <TextView
                     android:layout_width="wrap_content"
