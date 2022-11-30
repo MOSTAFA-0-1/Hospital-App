@@ -45,6 +45,8 @@
 
 
 
+
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -64,10 +66,11 @@
 
                     <ImageView
                         android:id="@+id/image1"
-                        android:layout_width="127dp"
+                        android:layout_width="125dp"
                         android:layout_height="125dp"
                         android:layout_marginTop="10dp"
-                        tools:srcCompat="@drawable/doctor2" />
+                        tools:src="@drawable/pdoc1"
+                        android:layout_marginLeft="5dp"/>
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -79,7 +82,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="15dp"
-                                android:text="DR . Mohamed"
+                                android:text="DR . Jack"
                                 android:textAlignment="gravity"
                                 android:textSize="20sp"
                                 android:textStyle="bold"
@@ -93,7 +96,7 @@
                                 android:id="@+id/favorite"
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
-                                android:layout_marginStart="20dp"
+                                android:layout_marginStart="88dp"
                                 android:layout_marginTop="15dp"
                                 android:background="@drawable/ic_baseline_favorite_border_24"
                                 tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck"
@@ -121,7 +124,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="2dp"
                             android:text="6 year experience"
-                            android:textSize="16sp"
+                            android:textSize="18sp"
                             app:layout_constraintStart_toStartOf="@+id/imageView2"
                             app:layout_constraintTop_toTopOf="@+id/textView3"
                             android:layout_marginLeft="15dp"/>
