@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bbg1"
-    tools:context=".popular_doctors">
+    >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,16 +15,20 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <Button
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:text="back"
-                android:backgroundTint="@color/white"
-                android:textColor="@color/black"
-                android:layout_marginStart="5dp"></Button>
+                android:id="@+id/button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="#00D3B7B7"
+
+                android:drawableBottom="@drawable/bot1"
+                app:iconSize="30dp"
+                app:iconTintMode="add" />
             <SearchView
                 android:layout_width="47dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="280dp"
+                android:layout_marginLeft="315dp"
                 ></SearchView>
 
         </LinearLayout>
@@ -73,34 +77,93 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:layout_marginLeft="15dp"
-                        android:background="@color/white">
-                        <ImageView
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:src="@drawable/pdoc1"></ImageView>
-                        <TextView
-                            android:layout_width="150dp"
-                            android:layout_height="wrap_content"
-                            android:text="Dr.Truluck Nick"
-                            android:textStyle="bold"
-                            android:textAlignment="center"
-                            android:textSize="18dp"></TextView>
-                        <TextView
-                            android:layout_width="150dp"
-                            android:layout_height="wrap_content"
-                            android:text="Medicine Specialist"
-                            android:textStyle="bold"
-                            android:textAlignment="center"
-                            android:textSize="12dp"
-                            android:textColor="@color/shadowgr"></TextView>
-                        <TextView
-                            android:layout_width="150dp"
-                            android:layout_height="wrap_content"
-                            android:text="4 stars"
-                            android:textAlignment="center"
-                            android:textStyle="bold"
-                            android:textSize="18dp"
-                            android:textColor="#E1B42E"></TextView>
+                        android:background="@drawable/ronded_card"
+                        android:backgroundTint="@color/white">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/ronded_card"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/ronded_card"
+                                android:src="@drawable/pdoc3"></ImageView>
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:text="Dr.Truluck Nick"
+                                android:textAlignment="center"
+                                android:textSize="18dp"
+                                android:textStyle="bold"></TextView>
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:text="Medicine Specialist"
+                                android:textAlignment="center"
+                                android:textColor="@color/shadowgr"
+                                android:textSize="12dp"
+                                android:textStyle="bold"></TextView>
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:text="4 stars"
+                                android:textAlignment="center"
+                                android:textStyle="bold"
+                                android:textSize="18dp"
+                                android:textColor="#E1B42E"></TextView>
+
+
+
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="15dp"
+                        android:backgroundTint="@color/white"
+                        android:background="@drawable/ronded_card">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:background="@drawable/ronded_card">
+
+                            <ImageView
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:src="@drawable/pdoc2"></ImageView>
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:text="Dr.Tranquilli"
+                                android:textStyle="bold"
+                                android:textAlignment="center"
+                                android:textSize="18dp"></TextView>
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:text="patheology Specialist"
+                                android:textStyle="bold"
+                                android:textAlignment="center"
+                                android:textSize="12dp"
+                                android:textColor="@color/shadowgr"></TextView>
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:text="4 stars"
+                                android:textAlignment="center"
+                                android:textStyle="bold"
+                                android:textSize="18dp"
+                                android:textColor="#E1B42E"></TextView>
+                        </LinearLayout>
 
 
                     </LinearLayout>
@@ -109,71 +172,42 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:layout_marginLeft="15dp"
-                        android:background="@color/white">
-                        <ImageView
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:src="@drawable/pdoc2"></ImageView>
-                        <TextView
-                            android:layout_width="150dp"
-                            android:layout_height="wrap_content"
-                            android:text="Dr.Tranquilli"
-                            android:textStyle="bold"
-                            android:textAlignment="center"
-                            android:textSize="18dp"></TextView>
-                        <TextView
-                            android:layout_width="150dp"
-                            android:layout_height="wrap_content"
-                            android:text="patheology Specialist"
-                            android:textStyle="bold"
-                            android:textAlignment="center"
-                            android:textSize="12dp"
-                            android:textColor="@color/shadowgr"></TextView>
-                        <TextView
-                            android:layout_width="150dp"
-                            android:layout_height="wrap_content"
-                            android:text="4 stars"
-                            android:textAlignment="center"
-                            android:textStyle="bold"
-                            android:textSize="18dp"
-                            android:textColor="#E1B42E"></TextView>
+                        android:backgroundTint="@color/white"
+                        android:background="@drawable/ronded_card">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:background="@drawable/ronded_card">
+                            <ImageView
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:src="@drawable/pdoc3"></ImageView>
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:text="Dr.Truluck Pope"
+                                android:textStyle="bold"
+                                android:textAlignment="center"
+                                android:textSize="18dp"></TextView>
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:text="Medicine Specialist"
+                                android:textStyle="bold"
+                                android:textAlignment="center"
+                                android:textSize="12dp"
+                                android:textColor="@color/shadowgr"></TextView>
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:text="4 stars"
+                                android:textAlignment="center"
+                                android:textStyle="bold"
+                                android:textSize="18dp"
+                                android:textColor="#E1B42E"></TextView>
 
-
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_marginLeft="15dp"
-                        android:background="@color/white">
-                        <ImageView
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:src="@drawable/pdoc3"></ImageView>
-                        <TextView
-                            android:layout_width="150dp"
-                            android:layout_height="wrap_content"
-                            android:text="Dr.Truluck Pope"
-                            android:textStyle="bold"
-                            android:textAlignment="center"
-                            android:textSize="18dp"></TextView>
-                        <TextView
-                            android:layout_width="150dp"
-                            android:layout_height="wrap_content"
-                            android:text="Medicine Specialist"
-                            android:textStyle="bold"
-                            android:textAlignment="center"
-                            android:textSize="12dp"
-                            android:textColor="@color/shadowgr"></TextView>
-                        <TextView
-                            android:layout_width="150dp"
-                            android:layout_height="wrap_content"
-                            android:text="4 stars"
-                            android:textAlignment="center"
-                            android:textStyle="bold"
-                            android:textSize="18dp"
-                            android:textColor="#E1B42E"></TextView>
-
+                        </LinearLayout>
 
                     </LinearLayout>
 
@@ -197,101 +231,217 @@
                 android:textStyle="bold"></TextView>
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="372dp"
             android:layout_height="160dp"
             android:layout_gravity="center"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:background="@color/white"
+            android:backgroundTint="@color/white"
+            android:background="@drawable/ronded_card"
             android:orientation="horizontal"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp">
-
+            >
             <LinearLayout
-                android:layout_width="133dp"
-                android:layout_height="150dp"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="137dp"
-                    android:layout_height="186dp"
-
-
-                    android:src="@drawable/doctor2">
-
-                </ImageView>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="165dp"
-                android:layout_height="165dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="28dp"
-                    android:text="@string/ndoc2"
-                    android:textSize="23dp"
-                    android:textStyle="bold"></TextView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:text="@string/doc_des2"
-                    android:textColor="@color/shadowgr"
-                    android:textSize="15dp"
-                    android:textStyle="bold"
-                    tools:ignore="TextContrastCheck" />
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/ronded_card"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
 
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:text="4 Stars"
-                    android:textColor="#E1B42E"
-                    android:textSize="28dp"
-                    android:textStyle="bold"></TextView>
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginLeft="5dp">
+                    android:layout_width="133dp"
+                    android:layout_height="150dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="137dp"
+                        android:layout_height="186dp"
+
+
+                        android:src="@drawable/doctor2">
+
+                    </ImageView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="165dp"
+                    android:layout_height="165dp"
+                    android:orientation="vertical">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="2.4"
-                        android:textStyle="bold"
-                        android:textSize="28dp"></TextView>
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="28dp"
+                        android:text="@string/ndoc2"
+                        android:textSize="23dp"
+                        android:textStyle="bold"></TextView>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="(2475 views)"
-                        android:textStyle="bold"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/doc_des2"
                         android:textColor="@color/shadowgr"
-                        android:textSize="20dp"></TextView>
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        tools:ignore="TextContrastCheck" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="4 Stars"
+                        android:textColor="#E1B42E"
+                        android:textSize="28dp"
+                        android:textStyle="bold"></TextView>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="5dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2.4"
+                            android:textStyle="bold"
+                            android:textSize="28dp"></TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="(2475 views)"
+                            android:textStyle="bold"
+                            android:textColor="@color/shadowgr"
+                            android:textSize="20dp"></TextView>
+
+                    </LinearLayout>
+
+
+
 
                 </LinearLayout>
 
+                <ImageView
+                    android:id="@+id/love11"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/ic_baseline_favorite_border_24"
+                    tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck">
 
-
-
+                </ImageView>
             </LinearLayout>
+        </LinearLayout>
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="-5dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/favourite"
+        <LinearLayout
+            android:layout_width="372dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/white"
+            android:background="@drawable/ronded_card"
+            android:orientation="horizontal"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/ronded_card"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
 
-                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck"></androidx.appcompat.widget.AppCompatButton>
+                <LinearLayout
+                    android:layout_width="133dp"
+                    android:layout_height="150dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="137dp"
+                        android:layout_height="186dp"
 
 
+                        android:src="@drawable/pdoc1">
+
+                    </ImageView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="165dp"
+                    android:layout_height="165dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="28dp"
+                        android:text="Dr.Mistry Brick"
+                        android:textSize="23dp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="Specialist Dentist"
+                        android:textColor="@color/shadowgr"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        tools:ignore="TextContrastCheck" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="4 Stars"
+                        android:textColor="#E1B42E"
+                        android:textSize="28dp"
+                        android:textStyle="bold"></TextView>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="5dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2.8"
+                            android:textStyle="bold"
+                            android:textSize="28dp"></TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="(2893 views)"
+                            android:textStyle="bold"
+                            android:textColor="@color/shadowgr"
+                            android:textSize="20dp"></TextView>
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+                <ImageView
+                android:id="@+id/love2"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/ic_baseline_favorite_border_24"
+                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck">
+
+            </ImageView>
+            </LinearLayout>
         </LinearLayout>
         <LinearLayout
             android:layout_width="372dp"
@@ -300,192 +450,103 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="15dp"
-            android:background="@color/white"
-            android:orientation="horizontal"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp">
-
+            android:background="@drawable/ronded_card"
+            android:backgroundTint="@color/white"
+            android:orientation="horizontal">
             <LinearLayout
-                android:layout_width="133dp"
-                android:layout_height="150dp"
-                android:orientation="vertical">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/ronded_card"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
 
-                <ImageView
-                    android:layout_width="137dp"
-                    android:layout_height="186dp"
-
-
-                    android:src="@drawable/pdoc1">
-
-                </ImageView>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="165dp"
-                android:layout_height="165dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="28dp"
-                    android:text="Dr.Mistry Brick"
-                    android:textSize="23dp"
-                    android:textStyle="bold"></TextView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:text="Specialist Dentist"
-                    android:textColor="@color/shadowgr"
-                    android:textSize="15dp"
-                    android:textStyle="bold"
-                    tools:ignore="TextContrastCheck" />
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:text="4 Stars"
-                    android:textColor="#E1B42E"
-                    android:textSize="28dp"
-                    android:textStyle="bold"></TextView>
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginLeft="5dp">
+                    android:layout_width="133dp"
+                    android:layout_height="150dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="137dp"
+                        android:layout_height="186dp"
+
+
+                        android:src="@drawable/pdoc2">
+
+                    </ImageView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="165dp"
+                    android:layout_height="165dp"
+                    android:orientation="vertical">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="2.8"
-                        android:textStyle="bold"
-                        android:textSize="28dp"></TextView>
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="28dp"
+                        android:text="Dr.Ether Wall"
+                        android:textSize="23dp"
+                        android:textStyle="bold"></TextView>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="(2893 views)"
-                        android:textStyle="bold"
+                        android:layout_marginStart="5dp"
+                        android:text="Specialist Cancer"
                         android:textColor="@color/shadowgr"
-                        android:textSize="20dp"></TextView>
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        tools:ignore="TextContrastCheck" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="4 Stars"
+                        android:textColor="#E1B42E"
+                        android:textSize="28dp"
+                        android:textStyle="bold"></TextView>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="5dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2.7"
+                            android:textStyle="bold"
+                            android:textSize="28dp"></TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="(2754 views)"
+                            android:textStyle="bold"
+                            android:textColor="@color/shadowgr"
+                            android:textSize="20dp"></TextView>
+
+                    </LinearLayout>
+
+
+
 
                 </LinearLayout>
 
-
-
-
-            </LinearLayout>
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="-5dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/favourite"
-
-                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck"></androidx.appcompat.widget.AppCompatButton>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="372dp"
-            android:layout_height="160dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="15dp"
-            android:background="@color/white"
-            android:orientation="horizontal"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp">
-
-            <LinearLayout
-                android:layout_width="133dp"
-                android:layout_height="150dp"
-                android:orientation="vertical">
-
                 <ImageView
-                    android:layout_width="137dp"
-                    android:layout_height="186dp"
-
-
-                    android:src="@drawable/pdoc2">
+                    android:id="@+id/love3"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/ic_baseline_favorite_border_24"
+                    tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck">
 
                 </ImageView>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="165dp"
-                android:layout_height="165dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="28dp"
-                    android:text="Dr.Ether Wall"
-                    android:textSize="23dp"
-                    android:textStyle="bold"></TextView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:text="Specialist Cancer"
-                    android:textColor="@color/shadowgr"
-                    android:textSize="15dp"
-                    android:textStyle="bold"
-                    tools:ignore="TextContrastCheck" />
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:text="4 Stars"
-                    android:textColor="#E1B42E"
-                    android:textSize="28dp"
-                    android:textStyle="bold"></TextView>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginLeft="5dp">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="2.7"
-                        android:textStyle="bold"
-                        android:textSize="28dp"></TextView>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="(2754 views)"
-                        android:textStyle="bold"
-                        android:textColor="@color/shadowgr"
-                        android:textSize="20dp"></TextView>
-
-                </LinearLayout>
-
-
-
 
             </LinearLayout>
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="-5dp"
-                android:layout_marginTop="20dp"
-
-                android:background="@drawable/favourite"
-
-                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck"></androidx.appcompat.widget.AppCompatButton>
-
-
         </LinearLayout>
         <LinearLayout
             android:layout_width="372dp"
@@ -495,95 +556,103 @@
             android:layout_marginRight="20dp"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
-            android:background="@color/white"
-            android:orientation="horizontal"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp">
-
+            android:background="@drawable/ronded_card"
+            android:backgroundTint="@color/white"
+            android:orientation="horizontal">
             <LinearLayout
-                android:layout_width="133dp"
-                android:layout_height="150dp"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="137dp"
-                    android:layout_height="186dp"
-
-
-                    android:src="@drawable/pdoc3">
-
-                </ImageView>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="165dp"
-                android:layout_height="165dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="28dp"
-                    android:text="Dr.Johan Smith"
-                    android:textSize="23dp"
-                    android:textStyle="bold"></TextView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:text="Specialist cardiologist"
-                    android:textColor="@color/shadowgr"
-                    android:textSize="15dp"
-                    android:textStyle="bold"
-                    tools:ignore="TextContrastCheck" />
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/ronded_card"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
 
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:text="4 Stars"
-                    android:textColor="#E1B42E"
-                    android:textSize="28dp"
-                    android:textStyle="bold"></TextView>
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginLeft="5dp">
+                    android:layout_width="133dp"
+                    android:layout_height="150dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="137dp"
+                        android:layout_height="186dp"
+
+
+                        android:src="@drawable/pdoc3">
+
+                    </ImageView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="165dp"
+                    android:layout_height="165dp"
+                    android:orientation="vertical">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="2.4"
-                        android:textStyle="bold"
-                        android:textSize="28dp"></TextView>
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="28dp"
+                        android:text="Dr.Johan Smith"
+                        android:textSize="23dp"
+                        android:textStyle="bold"></TextView>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="(2475 views)"
-                        android:textStyle="bold"
+                        android:layout_marginStart="5dp"
+                        android:text="Specialist cardiologist"
                         android:textColor="@color/shadowgr"
-                        android:textSize="20dp"></TextView>
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        tools:ignore="TextContrastCheck" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="4 Stars"
+                        android:textColor="#E1B42E"
+                        android:textSize="28dp"
+                        android:textStyle="bold"></TextView>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="5dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2.4"
+                            android:textStyle="bold"
+                            android:textSize="28dp"></TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="(2475 views)"
+                            android:textStyle="bold"
+                            android:textColor="@color/shadowgr"
+                            android:textSize="20dp"></TextView>
+
+                    </LinearLayout>
+
+
+
 
                 </LinearLayout>
 
+                <ImageView
+                    android:id="@+id/love4"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/ic_baseline_favorite_border_24"
+                    tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck">
 
-
-
+                </ImageView>
             </LinearLayout>
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="-5dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/favourite"
-
-                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck"></androidx.appcompat.widget.AppCompatButton>
-
-
         </LinearLayout>
     </LinearLayout>
 
