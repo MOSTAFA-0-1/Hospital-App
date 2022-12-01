@@ -98,7 +98,7 @@
                                 android:layout_height="30dp"
                                 android:layout_marginStart="88dp"
                                 android:layout_marginTop="15dp"
-                                android:background="@drawable/doc"
+                                android:background="@drawable/ic_baseline_favorite_border_24"
                                 tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck"
                                 >
 
@@ -137,7 +137,7 @@
                                 android:layout_height="20dp"
                                 android:layout_marginStart="15dp"
                                 android:layout_marginTop="10dp"
-                                android:background="@drawable/doc"
+                                android:background="@drawable/ic_baseline_fiber_manual_record_24"
                                 tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck"
                                 >
 
@@ -152,7 +152,7 @@
                                 android:layout_height="20dp"
                                 android:layout_marginStart="15dp"
                                 android:layout_marginTop="10dp"
-                                android:background="@drawable/doc"
+                                android:background="@drawable/ic_baseline_fiber_manual_record_24"
                                 tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck"
                                 >
                             </androidx.appcompat.widget.AppCompatButton>
