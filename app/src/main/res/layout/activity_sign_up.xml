@@ -33,6 +33,7 @@
             android:text="You can search c course, apply course and find scholarship with abroad studies."
             android:textColor="@color/shadowgr"
 
+
             android:textSize="17sp"
             android:textStyle="bold" />
         <LinearLayout
