@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
+
 //        Map<String, Object> user = new HashMap<>();
 //        user.put("first", "Ada");
 //        user.put("last", "Lovelace");
