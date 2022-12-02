@@ -5,10 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class LogIn extends AppCompatActivity {
     TextView textView;
+    Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,5 +23,17 @@ public class LogIn extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        button = findViewById(R.id.btn_login);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openActivaty(home.class);
+            }
+        });
+
+    }
+    void openActivaty(Class clas){
+        Intent intent = new Intent(this, clas);
+        startActivity(intent);
     }
 }

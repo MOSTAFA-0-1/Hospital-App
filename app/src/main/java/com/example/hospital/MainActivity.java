@@ -3,10 +3,12 @@ package com.example.hospital;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -25,10 +27,35 @@ public class MainActivity extends AppCompatActivity {
 //    FirebaseAuth auth = FirebaseAuth.getInstance();
 //    String emial = "";
 //    String password = "";
+TextView gotosignin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_log_in);
+        setContentView(R.layout.activity_main);
+        Thread thread = new Thread(){
+
+            @Override
+            public void run(){
+
+                try {
+                    sleep(2000);
+                    Intent intent =new Intent(getApplicationContext(),LogIn.class);
+                    startActivity(intent);
+                    finish();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        };
+        thread.start();
+//        gotosignin = findViewById(R.id.goToSignIn);
+//        gotosignin.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                openActivaty(LogIn.class);
+//            }
+//        });
 
 //        Map<String, Object> user = new HashMap<>();
 //        user.put("first", "Ada");
@@ -69,5 +96,9 @@ public class MainActivity extends AppCompatActivity {
 //                   imageView.setColorFilter(getResources().getColor(R.color.white));
 //               }
 //           });
+    }
+    void openActivaty(Class clas){
+        Intent intent = new Intent(this, clas);
+        startActivity(intent);
     }
 }

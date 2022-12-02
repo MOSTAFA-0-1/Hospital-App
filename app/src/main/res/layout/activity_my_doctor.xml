@@ -45,6 +45,17 @@
 
 
 
+          <androidx.appcompat.widget.SearchView
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_margin="10dp"
+              android:background="@drawable/ronded_card"
+
+              app:queryHint="Search here">
+
+          </androidx.appcompat.widget.SearchView>
+
+
 
 
         <RelativeLayout

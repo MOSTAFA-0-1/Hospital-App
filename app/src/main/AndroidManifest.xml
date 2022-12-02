@@ -31,6 +31,12 @@
             android:name=".onboarding"
             android:exported="false" />
         <activity
+            android:name=".LogIn"
+            android:exported="false" />
+        <activity
+            android:name=".sign_up"
+            android:exported="false" />
+        <activity
             android:name=".doctor_details"
             android:exported="false" />
         <activity
@@ -38,6 +44,9 @@
             android:exported="false" />
         <activity
             android:name=".Location"
+            android:exported="false" />
+        <activity
+            android:name=".home"
             android:exported="false" />
         <activity
             android:name=".Medicines_orders"
@@ -52,18 +61,19 @@
             android:name=".Tests_Screen"
             android:exported="false" />
         <activity
+            android:name=".FindDoctor"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".splash"
-            android:exported="false">
-
         </activity>
     </application>
 

@@ -7,14 +7,14 @@ import android.view.View;
 import android.widget.ImageView;
 
 public class popular_doctors extends AppCompatActivity {
-    boolean isFavourite;
+    boolean isFavourite = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_popular_doctors);
-//        //ImageView favclick= (ImageView) findViewById(R.id.love1);
-//        //favclick.setColorFilter(getResources().getColor(R.color.white));
+//        ImageView favclick= (ImageView) findViewById(R.id.love11);
+//        favclick.setColorFilter(getResources().getColor(R.color.white));
 //        favclick.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
