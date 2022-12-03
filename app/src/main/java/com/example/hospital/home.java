@@ -36,6 +36,7 @@ public class home extends AppCompatActivity {
             }
         });
 
+
         go1 =(Button) findViewById(R.id.button70);
 
         go1.setOnClickListener(new View.OnClickListener() {
