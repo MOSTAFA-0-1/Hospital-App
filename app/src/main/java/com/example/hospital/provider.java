@@ -21,6 +21,7 @@ public class provider  extends AppCompatActivity {
           doctor.put("spitialce",spitialce);
           doctor.put("url",url);
           doctors.add(doctor);
+
       }
 
 
