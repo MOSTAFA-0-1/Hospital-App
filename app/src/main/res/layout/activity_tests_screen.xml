@@ -10,25 +10,11 @@
     android:background="@drawable/backgroundimage"
     tools:openDrawer="start"
     >
-    <com.google.android.material.navigation.NavigationView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        app:menu="@menu/drawer_menu"
-        app:headerLayout="@layout/header_drawer"
-        android:id="@+id/nav_view"
-        android:layout_gravity="start"
-        android:fitsSystemWindows="true"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
-
-        <androidx.appcompat.widget.Toolbar
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:elevation="4dp"
-            android:id="@+id/toolbar"/>
 
         <ScrollView
             android:layout_width="match_parent"
@@ -106,7 +92,7 @@
                                         android:id="@+id/imageView2"
                                         android:layout_width="70dp"
                                         android:layout_height="80dp"
-                                        app:srcCompat="@drawable/apple" />
+                                        app:srcCompat="@drawable/eye" />
 
                                     <LinearLayout
                                         android:layout_width="wrap_content"
@@ -144,7 +130,7 @@
                                         android:id="@+id/imageView3"
                                         android:layout_width="70dp"
                                         android:layout_height="80dp"
-                                        app:srcCompat="@drawable/apple" />
+                                        app:srcCompat="@drawable/fit" />
 
                                     <LinearLayout
                                         android:layout_width="wrap_content"
@@ -185,7 +171,7 @@
                                         android:id="@+id/imageView4"
                                         android:layout_width="70dp"
                                         android:layout_height="80dp"
-                                        app:srcCompat="@drawable/apple" />
+                                        app:srcCompat="@drawable/ha" />
 
                                     <LinearLayout
                                         android:layout_width="wrap_content"
@@ -223,7 +209,7 @@
                                         android:id="@+id/imageView5"
                                         android:layout_width="70dp"
                                         android:layout_height="80dp"
-                                        app:srcCompat="@drawable/apple" />
+                                        app:srcCompat="@drawable/de" />
 
                                     <LinearLayout
                                         android:layout_width="wrap_content"
