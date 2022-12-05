@@ -4,29 +4,43 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
 
+import com.example.hospital.classes.RecAdapter;
 import com.google.android.material.navigation.NavigationView;
 
 public class Tests_Screen extends AppCompatActivity {
 
-    DrawerLayout drawerLayout;
-    NavigationView navigationView;
-    Toolbar toolbar;
-    ActionBarDrawerToggle toggle;
+
+   RecyclerView recyclerView;
+   RecAdapter adapter;
+    String [] arr = {"nasr","assem"};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tests_screen);
-        drawerLayout = findViewById(R.id.drawerlayout);
-        navigationView = findViewById(R.id.nav_view);
-        toolbar = findViewById(R.id.toolbar);
 
-        setSupportActionBar(toolbar);
 
-        toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.Navigation_drawer_open,R.string.Navigation_drawer_close);
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
+
+        int[] images = {R.drawable.dr3,R.drawable.dr4,R.drawable.dr3,R.drawable.dr4,R.drawable.dr3,R.drawable.dr4,R.drawable.dr3,R.drawable.dr4};
+
+
+
+        recyclerView = findViewById(R.id.rec1);
+        adapter = new RecAdapter(this,images);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this,RecyclerView.VERTICAL,true));
+        recyclerView.setAdapter(adapter);
+
+
+
     }
 }

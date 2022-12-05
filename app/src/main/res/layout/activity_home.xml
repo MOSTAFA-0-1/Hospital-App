@@ -228,7 +228,7 @@
                             app:cardElevation="5dp">
 
                             <ImageView
-                                android:id="@+id/imageView10"
+                                android:id="@+id/imageurl"
                                 android:layout_width="170dp"
                                 android:layout_height="160dp"
                                 android:layout_gravity="center_horizontal"
@@ -240,7 +240,7 @@
                                 app:srcCompat="@drawable/dr1" />
 
                             <TextView
-                                android:id="@+id/textView45"
+                                android:id="@+id/name"
                                 android:layout_width="130dp"
                                 android:layout_height="39dp"
                                 android:layout_gravity="center"

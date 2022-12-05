@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -21,13 +22,14 @@ public class home extends AppCompatActivity {
     NavigationView navigationView;
     Toolbar toolbar;
     ActionBarDrawerToggle toggle;
+    TextView name;
+    ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
         go =(Button) findViewById(R.id.button7);
-
         go.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,10 +37,7 @@ public class home extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
-
         go1 =(Button) findViewById(R.id.button70);
-
         go1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,12 +48,19 @@ public class home extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawer);
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.toolbar);
-
         setSupportActionBar(toolbar);
-
         toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.Navigation_drawer_open,R.string.Navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
+
+             name = findViewById(R.id.name);
+             if (provider.doctors.get(0).getFirstName() !=null)
+                 name.setText(provider.doctors.get(4).getFirstName());
+             else
+                 name.setText("Null");
+        int drawableId = this.getResources().getIdentifier("dr4", "drawable", this.getPackageName());
+             imageView = findViewById(R.id.imageurl);
+             imageView.setImageResource(drawableId);
 
     }
 }

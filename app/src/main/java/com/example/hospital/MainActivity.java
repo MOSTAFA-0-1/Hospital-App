@@ -32,23 +32,7 @@ TextView gotosignin;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Thread thread = new Thread(){
 
-            @Override
-            public void run(){
-
-                try {
-                    sleep(2000);
-                    Intent intent =new Intent(getApplicationContext(),LogIn.class);
-                    startActivity(intent);
-                    finish();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-
-            }
-        };
-        thread.start();
 //        gotosignin = findViewById(R.id.goToSignIn);
 //        gotosignin.setOnClickListener(new View.OnClickListener() {
 //            @Override
