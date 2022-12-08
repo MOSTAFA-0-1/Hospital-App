@@ -27,13 +27,13 @@ public class RecAdapter extends RecyclerView.Adapter<RecAdapter.ViewHolder>{
          * (custom ViewHolder).
          */
         public static class ViewHolder extends RecyclerView.ViewHolder {
-            private final TextView textView;
+              TextView textView;
             ImageView imageView;
             public ViewHolder(View view) {
                 super(view);
                 // Define click listener for the ViewHolder's View
-                imageView = view.findViewById(R.id.imagetest);
-                textView = (TextView) view.findViewById(R.id.testtext);
+                imageView = view.findViewById(R.id.testsdoc);
+//                textView = (TextView) view.findViewById(R.id.testtext);
             }
 
             public TextView getTextView() {
@@ -52,7 +52,7 @@ public class RecAdapter extends RecyclerView.Adapter<RecAdapter.ViewHolder>{
         public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
             // Create a new view, which defines the UI of the list item
             View view = LayoutInflater.from(context)
-                    .inflate(R.layout.testlistitem, viewGroup, false);
+                    .inflate(R.layout.tests_single_item, viewGroup, false);
 
             return new ViewHolder(view);
         }
@@ -63,14 +63,14 @@ public class RecAdapter extends RecyclerView.Adapter<RecAdapter.ViewHolder>{
         @Override
         public void onBindViewHolder(ViewHolder viewHolder, final int position) {
 
-            viewHolder.getTextView().setText(provider.doctors.get(position).getFirstName() + provider.doctors.get(position).getLastName());
+//            viewHolder.getTextView().setText(provider.doctors.get(position).getFirstName() + provider.doctors.get(position).getLastName());
             viewHolder.imageView.setImageResource(images[position]);
         }
 
         // Return the size of your dataset (invoked by the layout manager)
         @Override
         public int getItemCount() {
-            return provider.doctors.size();
+            return images.length;
         }
     }
 

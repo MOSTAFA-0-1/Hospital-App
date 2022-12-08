@@ -47,8 +47,8 @@
                 android:layout_marginTop="50dp"
                 android:background="@drawable/border">
                 <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="60dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:background="@drawable/facebook_logos_png19757"
                     android:layout_marginTop="15dp"
                     android:layout_marginLeft="10dp"/>
@@ -62,14 +62,15 @@
                     android:layout_marginTop="25dp"/>
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/google"
                 android:layout_width="180dp"
                 android:layout_height="80dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="50dp"
                 android:background="@drawable/border">
                 <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="60dp"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
                     android:background="@drawable/google_icon"
                     android:layout_marginTop="15dp"
                     android:layout_marginLeft="10dp"/>
@@ -117,12 +118,13 @@
             android:layout_marginTop="90dp"
             android:padding="5dp"
             android:ems="10"
+            android:id="@+id/userName"
             android:hint="Name"
             android:inputType="textPersonName"
             android:background="@drawable/ronded_card"/>
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/userEmail"
             android:layout_width="300dp"
             android:layout_height="48dp"
             android:layout_marginLeft="55dp"
@@ -133,7 +135,7 @@
             android:inputType="textPersonName"
             android:background="@drawable/ronded_card"/>
         <EditText
-            android:id="@+id/editTextTextPassword"
+            android:id="@+id/userPass"
             android:layout_width="300dp"
             android:layout_height="48dp"
             android:layout_marginLeft="55dp"
