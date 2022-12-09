@@ -81,4 +81,16 @@
     <string name="usd">$-USD</string>
     <string name="linked_accounts">Linked accounts</string>
     <string name="facebook_comma_google">Facebook, Google</string>
+    <string name="help_center">Help Center</string>
+    <string name="i_have_an_issue_with">I have an issue with</string>
+    <string name="booking_a_new_appointment">Booking a new Appointment</string>
+    <string name="existing_appointment">Existing Appointment</string>
+    <string name="online_consultations">Online Consultations</string>
+    <string name="feed_backs">Feed Backs</string>
+    <string name="medicine_orders">Medicine Orders</string>
+    <string name="diagnostic_tests">Diagnostic Tests</string>
+    <string name="health_plans">Health Plans</string>
+    <string name="my_account_and_practo_drive">My Account and Practo Drive</string>
+    <string name="have_a_feature_in_mind">Have a Feature In Mind</string>
+    <string name="other_issues">Other Issues</string>
 </resources>
