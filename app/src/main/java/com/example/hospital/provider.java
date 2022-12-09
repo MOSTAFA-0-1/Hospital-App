@@ -22,12 +22,16 @@ public class provider  extends AppCompatActivity {
 
     static FirebaseFirestore store = FirebaseFirestore.getInstance();
 
-   static    void addDoctor(String firstName,String lastName,String price,String specialty,String url){
-       Map<String,String> doctor = new HashMap<>();
+   static    void addDoctor(String firstName,String lastName,String price,String specialty,
+                            String url,String availableTime, int patientStories, double ratePrecent){
+       Map<String,Object> doctor = new HashMap<>();
           doctor.put("firstName",firstName);
           doctor.put("lastName",lastName);
           doctor.put("price",price+" $/Hour");
           doctor.put("specialty",specialty);
+          doctor.put("availableTime",availableTime);
+          doctor.put("patientStories",patientStories);
+          doctor.put("ratePrecent",ratePrecent);
           doctor.put("url",url);
         store.collection("Doctors").add(doctor);
       }

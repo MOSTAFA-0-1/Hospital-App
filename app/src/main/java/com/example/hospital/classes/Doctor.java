@@ -8,6 +8,35 @@ public class Doctor {
     String price;
     String specialty;
     String url;
+    String availableTime;
+    int patientStories;
+    double ratePrecent;
+
+    public String getAvailableTime() {
+        return availableTime;
+    }
+
+    public void setAvailableTime(String availableTime) {
+        this.availableTime = availableTime;
+    }
+
+    public int getPatientStories() {
+        return patientStories;
+    }
+
+    public void setPatientStories(int patientStories) {
+        this.patientStories = patientStories;
+    }
+
+    public double getRatePrecent() {
+        return ratePrecent;
+    }
+
+    public void setRatePrecent(double ratePrecent) {
+        this.ratePrecent = ratePrecent;
+    }
+
+
 
     public String getSpecialty() {
         return specialty;
@@ -50,12 +79,5 @@ public class Doctor {
     }
 
 
-    void Doctor(){}
-//    void Doctor(String firstName,String lastName,String price,String specialty,String url){
-//        this.firstName = firstName;
-//        this.lastName = lastName;
-//        this.price = price;
-//        this.specialty = specialty;
-//        this.url = url;
-//    }
+
 }
