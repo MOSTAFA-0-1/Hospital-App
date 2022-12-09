@@ -1,97 +1,317 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
 
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical"
     android:background="@drawable/backgroundimage">
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <LinearLayout
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ic_baseline_chevron_left_24"
+                    tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck"
+                    android:clickable="true"
+                    android:focusable="true">
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/help_center"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="60dp"
+            android:backgroundTint="@color/white"
+            android:background="@drawable/border">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/i_have_an_issue_with"
+                android:textAlignment="center"
+                android:textColor="#53B175"
+                android:textSize="25sp" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/border"
             android:orientation="horizontal">
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/ic_baseline_chevron_left_24"
-                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck"
-
-                >
-            </androidx.appcompat.widget.AppCompatButton>
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Help Center"
+                android:text="@string/booking_a_new_appointment"
                 android:textSize="20sp"
-                android:textColor="@color/black"
-
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"/>
-
+                android:layout_marginStart="10dp"
+                />
+            <ImageView
+                android:id="@+id/Next"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/ic_baseline_chevron_right_24"
+                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck"
+                android:clickable="true"
+                android:focusable="true">
+            </ImageView>
         </LinearLayout>
 
-
-
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginEnd="60dp"
-        android:backgroundTint="@color/white"
-        android:background="@drawable/border">
-
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="I Have an Issue With"
-            android:textAlignment="center"
-            android:textColor="#53B175"
-            android:textSize="25sp" />
+            android:background="@drawable/border"
+            android:layout_marginTop="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text= "@string/existing_appointment"
+                android:textSize="20sp"
+                android:layout_marginStart="10dp"
+                />
+            <ImageView
+                android:id="@+id/Next2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="160dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/ic_baseline_chevron_right_24"
+                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck"
+                android:clickable="true"
+                android:focusable="true">
+            </ImageView>
+        </LinearLayout>
 
-    </RelativeLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/border">
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Booking a New Appointment"
-            android:textSize="20sp"
-            android:layout_marginStart="10dp"
-            />
-        <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="90dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/ic_baseline_chevron_right_24"
-            tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck"
-            >
-        </androidx.appcompat.widget.AppCompatButton>
+            android:background="@drawable/border"
+            android:layout_marginTop="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text = "@string/online_consultations"
+                android:textSize="20sp"
+                android:layout_marginStart="10dp"
+                />
+            <ImageView
+                android:id="@+id/Next3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="165dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/ic_baseline_chevron_right_24"
+                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck"
+                android:clickable="true"
+                android:focusable="true">
+            </ImageView>
+        </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_marginTop="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/feed_backs"
+                android:textSize="20sp"
+                android:layout_marginStart="10dp"
+                />
+            <ImageView
+                android:id="@+id/Next4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="250dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/ic_baseline_chevron_right_24"
+                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck"
+                android:clickable="true"
+                android:focusable="true">
+            </ImageView>
+        </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_marginTop="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/medicine_orders"
+                android:textSize="20sp"
+                android:layout_marginStart="10dp"
+                />
+            <ImageView
+                android:id="@+id/Next5"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/ic_baseline_chevron_right_24"
+                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck"
+                android:clickable="true"
+                android:focusable="true">
+            </ImageView>
+        </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_marginTop="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/diagnostic_tests"
+                android:textSize="20sp"
+                android:layout_marginStart="10dp"
+                />
+            <ImageView
+                android:id="@+id/Next6"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="197dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/ic_baseline_chevron_right_24"
+                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck"
+                android:clickable="true"
+                android:focusable="true">
+            </ImageView>
+        </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_marginTop="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/health_plans"
+                android:textSize="20sp"
+                android:layout_marginStart="10dp"
+                />
+            <ImageView
+                android:id="@+id/Next7"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="233dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/ic_baseline_chevron_right_24"
+                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck"
+                android:clickable="true"
+                android:focusable="true">
+            </ImageView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_marginTop="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/my_account_and_practo_drive"
+                android:textSize="20sp"
+                android:layout_marginStart="10dp"
+                />
+            <ImageView
+                android:id="@+id/Next8"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/ic_baseline_chevron_right_24"
+                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck"
+                android:clickable="true"
+                android:focusable="true">
+            </ImageView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_marginTop="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/have_a_feature_in_mind"
+                android:textSize="20sp"
+                android:layout_marginStart="10dp"
+                />
+            <ImageView
+                android:id="@+id/Next9"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="145dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/ic_baseline_chevron_right_24"
+                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck"
+                android:clickable="true"
+                android:focusable="true">
+            </ImageView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_marginTop="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/other_issues"
+                android:textSize="20sp"
+                android:layout_marginStart="10dp"
+                />
+            <ImageView
+                android:id="@+id/Next10"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="233dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/ic_baseline_chevron_right_24"
+                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck"
+                android:clickable="true"
+                android:focusable="true">
+            </ImageView>
+        </LinearLayout>
 
     </LinearLayout>
 
 
-
-
-
-
-
-</LinearLayout>
+</ScrollView>
