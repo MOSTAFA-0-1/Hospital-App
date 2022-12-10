@@ -22,7 +22,8 @@ public class splash extends AppCompatActivity {
 //        provider.addDoctor("mohamed","awes","25","eyes","drawable/dr5.jpg","12",25,90);
 //        provider.addDoctor("Asem","Ali","90","surgery","drawable/dr6.jpg","11:30",16,92);
 //
-//        provider.getData();
+        provider.getData();
+//        provider.doctors.get(0).getFirstName();
 
         Thread thread = new Thread(){
 
@@ -30,8 +31,8 @@ public class splash extends AppCompatActivity {
             public void run(){
 
                 try {
-                    sleep(2000);
-                    Intent intent =new Intent(getApplicationContext(),Tests_Screen.class);
+                    sleep(4000);
+                    Intent intent =new Intent(getApplicationContext(),popular_doctors.class);
                     startActivity(intent);
                     finish();
                 } catch (InterruptedException e) {

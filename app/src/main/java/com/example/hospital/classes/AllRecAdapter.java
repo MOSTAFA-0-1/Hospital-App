@@ -29,7 +29,7 @@ public class AllRecAdapter extends RecyclerView.Adapter<AllRecAdapter.ViewHolder
         public ViewHolder(View view) {
             super(view);
             // Define click listener for the ViewHolder's View
-            imageView = view.findViewById(R.id.record);
+//            imageView = view.findViewById(R.id.record);
         }
 
         public TextView getTextView() { return textView; }
