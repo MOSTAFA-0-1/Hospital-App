@@ -20,9 +20,9 @@ import com.google.android.material.navigation.NavigationView;
 public class popular_doctors extends AppCompatActivity {
 //    boolean isFavourite = false;
     RecyclerView recyclerView_p2 ;
-    popular_Adpter2 adapter;
+    //popular_Adpter2 adapter;
     RecyclerView recyclerView_p1;
-    popular_Adpter1 adapter_p1;
+    //popular_Adpter1 adapter_p1;
     String [] arr = {"nasr","assem"};
 
     @Override
@@ -31,13 +31,13 @@ public class popular_doctors extends AppCompatActivity {
         setContentView(R.layout.activity_popular_doctors);
         recyclerView_p2=findViewById(R.id.p2_rec);
         int[] images = {R.drawable.dr3,R.drawable.dr4,R.drawable.dr3,R.drawable.dr4,R.drawable.dr3,R.drawable.dr4,R.drawable.dr3,R.drawable.dr4};
-        adapter = new popular_Adpter2(this,images);
+    //    adapter = new popular_Adpter2(this,images);
         recyclerView_p2.setLayoutManager(new LinearLayoutManager(this,RecyclerView.VERTICAL,true));
-        recyclerView_p2.setAdapter(adapter);
+    //    recyclerView_p2.setAdapter(adapter);
         recyclerView_p1 = findViewById(R.id.p1_rec);
-        adapter_p1 = new popular_Adpter1(this,images);
+    //    adapter_p1 = new popular_Adpter1(this,images);
         recyclerView_p1.setLayoutManager(new LinearLayoutManager(this,RecyclerView.HORIZONTAL,true));
-        recyclerView_p1.setAdapter(adapter_p1);
+     //   recyclerView_p1.setAdapter(adapter_p1);
 
 
 

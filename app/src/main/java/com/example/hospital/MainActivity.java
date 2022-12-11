@@ -81,8 +81,8 @@ TextView gotosignin;
 //               }
 //           });
     }
-    void openActivaty(Class clas){
+    /*void openActivaty(Class clas){
         Intent intent = new Intent(this, clas);
         startActivity(intent);
-    }
+    }*/
 }
