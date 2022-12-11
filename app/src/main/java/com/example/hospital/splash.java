@@ -7,6 +7,8 @@ import android.os.Bundle;
 
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.security.Provider;
+
 public class splash extends AppCompatActivity {
 
     @Override
@@ -35,6 +37,7 @@ public class splash extends AppCompatActivity {
                     Intent intent =new Intent(getApplicationContext(),My_Doctor.class);
                     startActivity(intent);
                     finish();
+
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
