@@ -197,114 +197,16 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:background="#DBE5F1"
-            android:clickable="true"
-            android:orientation="vertical">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/rec_favdoc2"/>
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_marginStart="10dp"
-                android:src="@drawable/doc"></de.hdodenhof.circleimageview.CircleImageView>
 
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="Dr.Merna"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                android:textStyle="bold"></TextView>
 
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:text="25.00/hours"
-                android:textAlignment="center"
-                android:textColor="#53B175"
-                android:textSize="15sp"
-                android:textStyle="bold"></TextView>
-        </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:background="#D7E3EF"
-            android:clickable="true"
-            android:orientation="vertical">
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_marginStart="10dp"
-                android:backgroundTint="#D9E4F0"
-                android:src="@drawable/doc8"></de.hdodenhof.circleimageview.CircleImageView>
 
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="Dr.Karim"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                android:textStyle="bold"></TextView>
-
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:text="40.00/hours"
-                android:textAlignment="center"
-                android:textColor="#53B175"
-                android:textSize="15sp"
-                android:textStyle="bold"></TextView>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:background="#DAE6F2"
-            android:clickable="true"
-            android:orientation="vertical">
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_marginStart="10dp"
-                android:src="@drawable/doc9"></de.hdodenhof.circleimageview.CircleImageView>
-
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="Dr.Sondos"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                android:textStyle="bold"></TextView>
-
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:text="50.00/hours"
-                android:textAlignment="center"
-                android:textColor="#53B175"
-                android:textSize="15sp"
-                android:textStyle="bold"></TextView>
-        </LinearLayout>
     </LinearLayout>
 </LinearLayout>
 
