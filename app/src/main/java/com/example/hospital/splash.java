@@ -34,7 +34,7 @@ public class splash extends AppCompatActivity {
 
                 try {
                     sleep(4000);
-                    Intent intent =new Intent(getApplicationContext(),FindDoctor.class);
+                    Intent intent =new Intent(getApplicationContext(),favourite.class);
                     startActivity(intent);
                     finish();
 
