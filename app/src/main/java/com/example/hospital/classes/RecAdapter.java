@@ -33,7 +33,7 @@ public class RecAdapter extends RecyclerView.Adapter<RecAdapter.ViewHolder>{
                 super(view);
                 // Define click listener for the ViewHolder's View
                 imageView = view.findViewById(R.id.testsdoc);
-//                textView = (TextView) view.findViewById(R.id.testtext);
+                textView = (TextView) view.findViewById(R.id.TestsPrice);
             }
 
             public TextView getTextView() {
@@ -65,12 +65,13 @@ public class RecAdapter extends RecyclerView.Adapter<RecAdapter.ViewHolder>{
 
 //            viewHolder.getTextView().setText(provider.doctors.get(position).getFirstName() + provider.doctors.get(position).getLastName());
             viewHolder.imageView.setImageResource(images[position]);
+            viewHolder.textView.setText(provider.doctors.get(position).getFirstName());
         }
 
         // Return the size of your dataset (invoked by the layout manager)
         @Override
         public int getItemCount() {
-            return images.length;
+            return provider.doctors.size();
         }
     }
 

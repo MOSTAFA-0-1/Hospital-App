@@ -23,7 +23,7 @@ public class provider  extends AppCompatActivity {
     static FirebaseFirestore store = FirebaseFirestore.getInstance();
 
    static    void addDoctor(String firstName,String lastName,String price,String specialty,
-                            String url,String availableTime, int patientStories, double ratePrecent){
+                            String url,String availableTime, int patientStories, double ratePrecent,List freeTimes){
        Map<String,Object> doctor = new HashMap<>();
           doctor.put("firstName",firstName);
           doctor.put("lastName",lastName);
@@ -38,6 +38,7 @@ public class provider  extends AppCompatActivity {
 
   static  public List<Doctor> doctors = new ArrayList<Doctor>();
 
+
       static     void  getData(){
            store.collection("Doctors").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                @Override
@@ -45,6 +46,8 @@ public class provider  extends AppCompatActivity {
                    for (QueryDocumentSnapshot  document : queryDocumentSnapshots){
                        Doctor doctor = document.toObject(Doctor.class);
                        doctors.add(doctor);
+
+                       System.out.println(doctors.get(0).getFirstName());
                    }
                }
            });

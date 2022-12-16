@@ -30,10 +30,10 @@ public class Tests_Screen extends AppCompatActivity {
         setContentView(R.layout.activity_tests_screen);
 
 
+        System.out.println( provider.doctors.size());
+        int[] images = {R.drawable.dr3,R.drawable.dr4,R.drawable.dr3,R.drawable.dr4,R.drawable.dr3,R.drawable.dr4,R.drawable.dr3,R.drawable.dr4,R.drawable.dr4,R.drawable.dr3,R.drawable.dr4};
 
-        int[] images = {R.drawable.dr3,R.drawable.dr4,R.drawable.dr3,R.drawable.dr4,R.drawable.dr3,R.drawable.dr4,R.drawable.dr3,R.drawable.dr4};
-
-
+        System.out.println( provider.doctors.get(0).getLastName());
 
         recyclerView = findViewById(R.id.rec1);
         adapter = new RecAdapter(this,images);
