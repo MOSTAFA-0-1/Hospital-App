@@ -35,6 +35,13 @@ public class popular_Adpter1 extends RecyclerView.Adapter<popular_Adpter1.ViewHo
             textView1 = (TextView) view.findViewById(R.id.p1doc_name);
             textView2 = (TextView) view.findViewById(R.id.p1_doc_spec);
             textView3 = (TextView) view.findViewById(R.id.p1_doc_stars);
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    provider.intentTo(view.getContext(),doctor_details.class,getLayoutPosition());
+                    System.out.println(getLayoutPosition());
+                }
+            });
 
         }
 

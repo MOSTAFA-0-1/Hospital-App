@@ -10,6 +10,7 @@ import android.widget.TextView;
 public class doctor_details extends AppCompatActivity {
 
     TextView doctorName;
+    TextView doctorSpec;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -19,8 +20,12 @@ public class doctor_details extends AppCompatActivity {
        int index = getIntent().getIntExtra("index",0);
 
         doctorName = findViewById(R.id.doc_name);
+        doctorSpec = findViewById(R.id.dDoc_spec);
         //
         doctorName.setText(provider.doctors.get(index).getFirstName()+""+provider.doctors.get(index).getLastName());
+        doctorSpec.setText((provider.doctors.get(index).getSpecialty()));
+
+
 
     }
 }
