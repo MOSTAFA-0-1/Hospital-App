@@ -19,12 +19,12 @@
             android:background="@drawable/ronded_card"
             android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="150dp"
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="130dp"
                 android:layout_height="150dp"
+                android:layout_gravity="center"
                 android:id="@+id/p1doc_photo"
-                android:background="@drawable/ronded_card"
-                android:src="@drawable/pdoc3"></ImageView>
+                android:src="@drawable/pdoc3"></de.hdodenhof.circleimageview.CircleImageView>
 
             <TextView
                 android:layout_width="150dp"
