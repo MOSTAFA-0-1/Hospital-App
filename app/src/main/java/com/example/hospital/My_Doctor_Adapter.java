@@ -1,4 +1,4 @@
-package com.example.hospital.classes;
+package com.example.hospital;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,11 +8,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.example.hospital.R;
-import com.example.hospital.provider;
-
-import java.security.Provider;
 
 public class My_Doctor_Adapter extends RecyclerView.Adapter<My_Doctor_Adapter.ViewHolder>{
 
@@ -40,6 +35,14 @@ public class My_Doctor_Adapter extends RecyclerView.Adapter<My_Doctor_Adapter.Vi
             //textView4 = (TextView) view.findViewById(R.id.docPrecedent);
             textView5 = (TextView) view.findViewById(R.id.docSpecialist);
             textView6 = (TextView) view.findViewById(R.id.docTimeAvailable);
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    provider.intentTo(view.getContext(),doctor_details.class,getLayoutPosition());
+                    System.out.println(getLayoutPosition());
+
+                }
+            });
 
         }
 
@@ -68,7 +71,7 @@ public class My_Doctor_Adapter extends RecyclerView.Adapter<My_Doctor_Adapter.Vi
 
 
 
-    public My_Doctor_Adapter(Context context,int[] images) {
+    public My_Doctor_Adapter(Context context, int[] images) {
         this.context = context ;
         this.images = images;
     }
@@ -80,7 +83,7 @@ public class My_Doctor_Adapter extends RecyclerView.Adapter<My_Doctor_Adapter.Vi
         View view = LayoutInflater.from(context)
                 .inflate(R.layout.my_doctor, viewGroup, false);
 
-        return new My_Doctor_Adapter.ViewHolder(view);
+        return new ViewHolder(view);
     }
 
 
