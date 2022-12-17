@@ -1,19 +1,10 @@
 package com.example.hospital;
 
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.drawerlayout.widget.DrawerLayout;
-import android.content.Intent;
+
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageView;
-import android.view.Window;
-import android.view.WindowManager;
-import com.example.hospital.classes.My_Doctor_Adapter;
-import com.example.hospital.classes.RecAdapter;
-import com.google.android.material.navigation.NavigationView;
 
 public class My_Doctor extends AppCompatActivity {
     boolean isFavourite = false;
