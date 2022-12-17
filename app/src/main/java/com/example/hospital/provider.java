@@ -6,6 +6,7 @@ import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.hospital.classes.Doctor;
+import com.google.android.gms.common.internal.safeparcel.SafeParcelable;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
@@ -17,7 +18,12 @@ import java.util.List;
 import java.util.Map;
 
 public class provider  extends AppCompatActivity {
-
+    static Intent intent;
+    static  void intentTo(Context context,Class clas,int index){
+        intent = new Intent(context,clas);
+        intent.putExtra("index",index);
+        context.startActivity(intent);
+    }
     static FirebaseFirestore store = FirebaseFirestore.getInstance();
 
    static    void addDoctor(String firstName,String lastName,String price,String specialty,

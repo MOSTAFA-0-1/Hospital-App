@@ -27,6 +27,7 @@ public class popular_Adpter1 extends RecyclerView.Adapter<popular_Adpter1.ViewHo
         TextView textView2;
         TextView textView3;
         ImageView imageView;
+
         public ViewHolder(View view) {
             super(view);
             // Define click listener for the ViewHolder's View

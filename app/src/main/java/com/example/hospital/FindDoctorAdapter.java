@@ -1,6 +1,7 @@
-package com.example.hospital.classes;
+package com.example.hospital;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,10 +10,6 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.hospital.R;
-import com.example.hospital.provider;
-
-import java.security.Provider;
 
 public class FindDoctorAdapter extends RecyclerView.Adapter<FindDoctorAdapter.ViewHolder>{
 
@@ -29,6 +26,7 @@ public class FindDoctorAdapter extends RecyclerView.Adapter<FindDoctorAdapter.Vi
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView textView1 ,  textView3 ,  textView5 ,textView6;
         ImageView imageView;
+        Intent intent;
 
         public ViewHolder(View view) {
             super(view);
@@ -40,6 +38,13 @@ public class FindDoctorAdapter extends RecyclerView.Adapter<FindDoctorAdapter.Vi
             //textView4 = (TextView) view.findViewById(R.id.docPrecedent1);
             textView5 = (TextView) view.findViewById(R.id.docSpecialist1);
             textView6 = (TextView) view.findViewById(R.id.docTimeAvailable1);
+             view.setOnClickListener(new View.OnClickListener() {
+                 @Override
+                 public void onClick(View view) {
+                     provider.intentTo(view.getContext(),doctor_details.class,getLayoutPosition());
+                     System.out.println(getLayoutPosition());
+                 }
+             });
 
         }
 
@@ -95,6 +100,7 @@ public class FindDoctorAdapter extends RecyclerView.Adapter<FindDoctorAdapter.Vi
         viewHolder.imageView.setImageResource(images[position]);
 
     }
+
 
     // Return the size of your dataset (invoked by the layout manager)
     @Override
