@@ -5,9 +5,9 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.ClipData;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -17,6 +17,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.hospital.classes.HomeAdapterForFeature;
+import com.example.hospital.classes.HomeAdapterForPopular;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -30,10 +32,33 @@ public class home extends AppCompatActivity {
     TextView name;
     ImageView imageView;
     MenuItem item;
+
+    RecyclerView popularDoctorsRecyclerView;
+    RecyclerView featuredDoctorsRecyclerView;
+
+    HomeAdapterForPopular adapterForHomeActivityPop;
+    HomeAdapterForFeature adapterForHomeActivityFeat;
+    String [] arr = {"peter","jack"};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        LinearLayoutManager horizontalLayoutManager = new LinearLayoutManager(home.this, LinearLayoutManager.HORIZONTAL, false);
+
+        popularDoctorsRecyclerView = (RecyclerView) findViewById(R.id.recyclerPopDoctor);
+        int[] images = {R.drawable.dr1,R.drawable.dr2,R.drawable.dr3,R.drawable.dr4,R.drawable.dr5,R.drawable.dr6,R.drawable.doc8,R.drawable.doc9};
+        adapterForHomeActivityPop = new HomeAdapterForPopular(this,images);
+        popularDoctorsRecyclerView.setLayoutManager(new LinearLayoutManager(this,RecyclerView.HORIZONTAL,true));
+        popularDoctorsRecyclerView.setAdapter(adapterForHomeActivityPop);
+
+        featuredDoctorsRecyclerView = (RecyclerView) findViewById(R.id.recyclerFeatDoctor);
+        adapterForHomeActivityFeat = new HomeAdapterForFeature(this,images);
+        featuredDoctorsRecyclerView.setLayoutManager(new LinearLayoutManager(this,RecyclerView.HORIZONTAL,true));
+        featuredDoctorsRecyclerView.setAdapter(adapterForHomeActivityPop);
+        featuredDoctorsRecyclerView.setLayoutManager(horizontalLayoutManager);
+
 
 
 //        item = findViewById(R.id.logout);
@@ -72,19 +97,18 @@ public class home extends AppCompatActivity {
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
-             name = findViewById(R.id.name);
-             if (provider.doctors.get(0).getFirstName() !=null)
-                 name.setText(provider.doctors.get(4).getFirstName());
-             else
-                 name.setText("Null");
-        int drawableId = this.getResources().getIdentifier("dr4", "drawable", this.getPackageName());
-             imageView = findViewById(R.id.imageurl);
-             imageView.setImageResource(drawableId);
+//             name = findViewById(R.id.name);
+//             if (provider.doctors.get(0).getFirstName() !=null)
+//                 name.setText(provider.doctors.get(4).getFirstName());
+//             else
+//                 name.setText("Null");
+//        int drawableId = this.getResources().getIdentifier("dr4", "drawable", this.getPackageName());
+//             imageView = findViewById(R.id.imageurl);
+//             imageView.setImageResource(drawableId);
 
     }
 
     @Override
-
     public boolean onCreateOptionsMenu(Menu menu) {
 
         getMenuInflater().inflate(R.menu.drawer_menu,menu);
@@ -106,7 +130,6 @@ public class home extends AppCompatActivity {
                 Intent i = new Intent(home.this,sign_up.class);
                 startActivity(i);
                 return true;
-
         }
 
         return super.onOptionsItemSelected(item);
