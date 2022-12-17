@@ -54,9 +54,9 @@ public class FindDoctorAdapter extends RecyclerView.Adapter<FindDoctorAdapter.Vi
         /* public TextView getTextView2() {
              return textView2  ;
          }*/
-        public TextView getTextView3() {
-            return textView3  ;
-        }
+        //public TextView getTextView3() {
+           // return textView3  ;
+        //}
         /* public TextView getTextView4() {
              return textView4  ;
          }*/

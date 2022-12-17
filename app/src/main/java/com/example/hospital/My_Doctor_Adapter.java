@@ -52,9 +52,9 @@ public class My_Doctor_Adapter extends RecyclerView.Adapter<My_Doctor_Adapter.Vi
        /* public TextView getTextView2() {
             return textView2  ;
         }*/
-        public TextView getTextView3() {
+        /*public TextView getTextView3() {
             return textView3  ;
-        }
+        }*/
        /* public TextView getTextView4() {
             return textView4  ;
         }*/
