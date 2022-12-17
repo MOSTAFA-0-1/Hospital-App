@@ -114,6 +114,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
+                        android:id="@+id/dDoc_price"
                         android:text="$ 28.00/hr"
                         android:textColor="@color/primary"
                         android:textSize="28dp"></TextView>
