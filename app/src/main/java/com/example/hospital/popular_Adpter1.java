@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -27,14 +28,15 @@ public class popular_Adpter1 extends RecyclerView.Adapter<popular_Adpter1.ViewHo
         TextView textView2;
         TextView textView3;
         ImageView imageView;
-
+        RatingBar ratingBar;
         public ViewHolder(View view) {
             super(view);
             // Define click listener for the ViewHolder's View
             imageView = view.findViewById(R.id.p1doc_photo);
             textView1 = (TextView) view.findViewById(R.id.p1doc_name);
             textView2 = (TextView) view.findViewById(R.id.p1_doc_spec);
-            textView3 = (TextView) view.findViewById(R.id.p1_doc_stars);
+            ratingBar = view.findViewById(R.id.ra1);
+
 
         }
 
@@ -76,6 +78,12 @@ public class popular_Adpter1 extends RecyclerView.Adapter<popular_Adpter1.ViewHo
         viewHolder.getTextView1().setText(provider.doctors.get(position).getFirstName() + provider.doctors.get(position).getLastName());
         viewHolder.getTextView2().setText(provider.doctors.get(position).getSpecialty());
         viewHolder.imageView.setImageResource(images[position]);
+        viewHolder.ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float v, boolean b) {
+                System.out.println(v);
+            }
+        });
     }
 
     // Return the size of your dataset (invoked by the layout manager)

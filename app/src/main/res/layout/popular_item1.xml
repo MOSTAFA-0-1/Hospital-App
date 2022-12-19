@@ -44,18 +44,19 @@
                 android:textColor="@color/shadowgr"
                 android:textSize="12dp"
                 android:textStyle="bold"></TextView>
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:text="4 stars"
-                android:id="@+id/p1_doc_stars"
-                android:textAlignment="center"
-                android:textStyle="bold"
-                android:textSize="18dp"
-                android:textColor="#E1B42E"></TextView>
 
-
-
+            <RatingBar
+                android:id="@+id/ra1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:numStars="5"
+                android:progressTint="#F6D060"
+                android:rating="4"
+                android:scaleX="0.5"
+                android:scaleY="0.5"
+                android:stepSize="0.5"
+                android:transformPivotX="13dp"
+                ></RatingBar>
 
 
         </LinearLayout>

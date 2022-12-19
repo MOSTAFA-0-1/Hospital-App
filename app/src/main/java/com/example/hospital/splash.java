@@ -8,6 +8,8 @@ import android.os.Bundle;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.security.Provider;
+import java.util.ArrayList;
+import java.util.List;
 
 public class splash extends AppCompatActivity {
 
@@ -24,8 +26,15 @@ public class splash extends AppCompatActivity {
 //        provider.addDoctor("mohamed","awes","25","eyes","drawable/dr5.jpg","12",25,90);
 //        provider.addDoctor("Asem","Ali","90","surgery","drawable/dr6.jpg","11:30",16,92);
 //
+//        List data = new ArrayList();
+//        data.add("5 PM");
+//        data.add("3 PM");
+//        data.add("4 PM");
+//        provider.addDoctor("Asem","Ali","90",
+//                "surgery","drawable/dr6.jpg","11:30"
+//                ,16,92,data);
         provider.getData();
-//        provider.doctors.get(0).getFirstName();
+
 
         Thread thread = new Thread(){
 
@@ -34,7 +43,8 @@ public class splash extends AppCompatActivity {
 
                 try {
                     sleep(4000);
-                    Intent intent =new Intent(getApplicationContext(),FindDoctor.class);
+//                    System.out.println(provider.doctors.get(9).getFreeTime().get(0));
+                    Intent intent =new Intent(getApplicationContext(),sign_up.class);
                     startActivity(intent);
                     finish();
 

@@ -72,11 +72,11 @@ public class home extends AppCompatActivity {
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
-             name = findViewById(R.id.name);
-             if (provider.doctors.get(0).getFirstName() !=null)
-                 name.setText(provider.doctors.get(4).getFirstName());
-             else
-                 name.setText("Null");
+//             name = findViewById(R.id.name);
+//             if (provider.doctors.get(0).getFirstName() !=null)
+//                 name.setText(provider.doctors.get(4).getFirstName());
+//             else
+//                 name.setText("Null");
         int drawableId = this.getResources().getIdentifier("dr4", "drawable", this.getPackageName());
              imageView = findViewById(R.id.imageurl);
              imageView.setImageResource(drawableId);
