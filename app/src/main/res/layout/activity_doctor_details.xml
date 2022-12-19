@@ -79,7 +79,8 @@
                         android:layout_height="186dp"
 
 
-                        android:src="@drawable/doctor2">
+                        android:src="@drawable/doctor2"
+                        android:id="@+id/imDR">
 
                     </ImageView>
                 </LinearLayout>
@@ -100,9 +101,11 @@
                         android:textStyle="bold"></TextView>
 
                     <TextView
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
+                        android:id="@+id/dDoc_spec"
                         android:text="@string/doc_des2"
                         android:textColor="@color/shadowgr"
                         android:textSize="15dp"
@@ -113,6 +116,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
+                        android:id="@+id/dDoc_price"
                         android:text="$ 28.00/hr"
                         android:textColor="@color/primary"
                         android:textSize="28dp"></TextView>

@@ -30,7 +30,8 @@ public class popular_doctors extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_popular_doctors);
         recyclerView_p2=findViewById(R.id.p2_rec);
-        int[] images = {R.drawable.dr3,R.drawable.dr4,R.drawable.dr3,R.drawable.dr4,R.drawable.dr3,R.drawable.dr4,R.drawable.dr3,R.drawable.dr4};
+        int[] images = {R.drawable.dr1,R.drawable.dr2,R.drawable.dr3,R.drawable.dr4,R.drawable.dr1,
+                R.drawable.dr2,R.drawable.dr4,R.drawable.dr3};
         adapter = new popular_Adpter2(this,images);
         recyclerView_p2.setLayoutManager(new LinearLayoutManager(this,RecyclerView.VERTICAL,true));
         recyclerView_p2.setAdapter(adapter);

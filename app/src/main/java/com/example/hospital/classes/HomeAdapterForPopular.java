@@ -12,9 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.hospital.R;
 import com.example.hospital.provider;
 
-import java.security.Provider;
-
-public class My_Doctor_Adapter extends RecyclerView.Adapter<My_Doctor_Adapter.ViewHolder>{
+public class HomeAdapterForPopular extends RecyclerView.Adapter<HomeAdapterForPopular.ViewHolder>{
 
 
 
@@ -27,48 +25,28 @@ public class My_Doctor_Adapter extends RecyclerView.Adapter<My_Doctor_Adapter.Vi
      * (custom ViewHolder).
      */
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView textView1 ,  textView3 ,  textView5 ,textView6;
+        TextView textView1 ,  textView2;
         ImageView imageView;
 
         public ViewHolder(View view) {
             super(view);
             // Define click listener for the ViewHolder's View
-            imageView = (ImageView) view.findViewById(R.id.image1);
-            textView1 = (TextView) view.findViewById(R.id.docName);
-            //textView2 = (TextView) view.findViewById(R.id.docExperience);
-            textView3 = (TextView) view.findViewById(R.id.docPatientStory);
-            //textView4 = (TextView) view.findViewById(R.id.docPrecedent);
-            textView5 = (TextView) view.findViewById(R.id.docSpecialist);
-            textView6 = (TextView) view.findViewById(R.id.docTimeAvailable);
+            imageView = view.findViewById(R.id.imageOfDoc);
+            textView1 = view.findViewById(R.id.nameOfDoc);
+            textView2 = view.findViewById(R.id.docSpeciality);
 
         }
 
         public TextView getTextView1() {
-            return textView1  ;
+            return textView1;
         }
-       /* public TextView getTextView2() {
-            return textView2  ;
-        }*/
-        public TextView getTextView3() {
-            return textView3  ;
-        }
-       /* public TextView getTextView4() {
-            return textView4  ;
-        }*/
-        public TextView getTextView5() {
-            return textView5  ;
-        }
-        public TextView getTextView6() {
-            return textView6  ;
-        }
-
-
+        public TextView getTextView2() { return textView2; }
     }
 
 
 
 
-    public My_Doctor_Adapter(Context context,int[] images) {
+    public HomeAdapterForPopular(Context context, int[] images) {
         this.context = context ;
         this.images = images;
     }
@@ -78,9 +56,9 @@ public class My_Doctor_Adapter extends RecyclerView.Adapter<My_Doctor_Adapter.Vi
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
         // Create a new view, which defines the UI of the list item
         View view = LayoutInflater.from(context)
-                .inflate(R.layout.my_doctor, viewGroup, false);
+                .inflate(R.layout.activity_home_recyler_popular, viewGroup, false);
 
-        return new My_Doctor_Adapter.ViewHolder(view);
+        return new HomeAdapterForPopular.ViewHolder(view);
     }
 
 
@@ -89,11 +67,8 @@ public class My_Doctor_Adapter extends RecyclerView.Adapter<My_Doctor_Adapter.Vi
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
         viewHolder.getTextView1().setText(provider.doctors.get(position).getFirstName() + provider.doctors.get(position).getLastName());
-        viewHolder.getTextView6().setText(provider.doctors.get(position).getAvailableTime());
-        viewHolder.getTextView5().setText(provider.doctors.get(position).getSpecialty());
-        //viewHolder.getTextView3().setText(provider.doctors.get(position).getPatientStories());
+        viewHolder.getTextView2().setText(provider.doctors.get(position).getSpecialty());
         viewHolder.imageView.setImageResource(images[position]);
-
     }
 
     // Return the size of your dataset (invoked by the layout manager)
