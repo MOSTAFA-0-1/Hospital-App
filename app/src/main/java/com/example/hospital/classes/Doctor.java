@@ -23,6 +23,7 @@ public class Doctor {
     public List<String> getFreeTime() {
         return freetimes;
     }
+
 //
 //    public void setFreeTime(List<String> freeTime) {
 //        this.freetimes = freeTime;

@@ -34,6 +34,7 @@ public class provider  extends AppCompatActivity {
           doctor.put("firstName",firstName);
           doctor.put("lastName",lastName);
           doctor.put("price",price+" $/Hour");
+
           doctor.put("specialty",specialty);
           doctor.put("availableTime",availableTime);
           doctor.put("patientStories",patientStories);
