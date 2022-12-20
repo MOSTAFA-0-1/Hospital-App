@@ -6,6 +6,7 @@ import java.util.List;
 public class User {
     String Name,status,number,birthDay;
     public List<Doctor> favouriteDoctors = new ArrayList<Doctor>();
+    public List<Doctor> bookedDoctors = new ArrayList<Doctor>();
 
     public String getName() {
         return Name;

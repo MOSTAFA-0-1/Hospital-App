@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.SearchView;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -30,6 +31,7 @@ public class popular_Adpter2 extends RecyclerView.Adapter<popular_Adpter2.ViewHo
         TextView textView4;
         TextView textView5;
         ImageView imageView;
+        SearchView searchView;
         public ViewHolder(View view) {
             super(view);
             // Define click listener for the ViewHolder's View
@@ -39,6 +41,20 @@ public class popular_Adpter2 extends RecyclerView.Adapter<popular_Adpter2.ViewHo
             textView3 = (TextView) view.findViewById(R.id.stars);
             textView4 = (TextView) view.findViewById(R.id.rate);
             textView5 = (TextView) view.findViewById(R.id.views);
+//            searchView = view.findViewById(R.id.searchV);
+
+//            searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+//                @Override
+//                public boolean onQueryTextSubmit(String s) {
+//                    return false;
+//                }
+//
+//                @Override
+//                public boolean onQueryTextChange(String newText) {
+//
+//                    return false;
+//                }
+//            });
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -88,7 +104,7 @@ public class popular_Adpter2 extends RecyclerView.Adapter<popular_Adpter2.ViewHo
     @Override
     public void onBindViewHolder(popular_Adpter2.ViewHolder viewHolder, final int position) {
 
-        viewHolder.getTextView1().setText(provider.doctors.get(position).getFirstName() + provider.doctors.get(position).getLastName());
+        viewHolder.getTextView1().setText(provider.doctors.get(position).getFirstName() + " "+ provider.doctors.get(position).getLastName());
         viewHolder.getTextView2().setText(provider.doctors.get(position).getSpecialty());
         viewHolder.imageView.setImageResource(images[position]);
     }
