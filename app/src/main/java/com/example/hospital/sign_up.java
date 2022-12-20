@@ -63,12 +63,19 @@ public class sign_up extends AppCompatActivity {
             public void onClick(View view) {
                 password = pass.getText().toString();
                 email2 = email.getText().toString();
+                if (email2.isEmpty()){
+                    Toast.makeText(getApplicationContext(), "E-mial is Empty", Toast.LENGTH_LONG).show();
+                }
+                if (password.isEmpty()){
+                    Toast.makeText(getApplicationContext(), "Password is Empty", Toast.LENGTH_LONG).show();
+                }
+                if(email2.isEmpty() == false && password.isEmpty() == false)
                 Auth.createUserWithEmailAndPassword(email2, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
                             System.out.println("success");
-                            openActivaty(home.class);
+                            openActivaty(Patien_Detailes_2.class);
                         }else
                         if (email2.isEmpty())
                             System.out.println("e is null");
@@ -117,7 +124,7 @@ public class sign_up extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
-                                    Intent intent = new Intent(getApplicationContext(), home.class);
+                                    Intent intent = new Intent(getApplicationContext(), Patien_Detailes_2.class);
                                     startActivity(intent);
 
                                 } else {

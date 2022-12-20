@@ -38,6 +38,12 @@ public class popular_Adpter1 extends RecyclerView.Adapter<popular_Adpter1.ViewHo
             textView2 = (TextView) view.findViewById(R.id.p1_doc_spec);
             ratingBar=(RatingBar) view.findViewById(R.id.ra1) ;
 
+            ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+                @Override
+                public void onRatingChanged(RatingBar ratingBar, float v, boolean b) {
+                    System.out.println(v);
+                }
+            });
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

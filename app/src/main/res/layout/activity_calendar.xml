@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/photo_2022_11_05_19_06_24"
     android:orientation="vertical"
-    tools:context=".Calendar">
+    tools:context=".calendar">
 
   <CalendarView
       android:id="@+id/calend"
