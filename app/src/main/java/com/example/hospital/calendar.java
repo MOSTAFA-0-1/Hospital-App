@@ -20,6 +20,7 @@ public class calendar extends AppCompatActivity {
         cv = findViewById(R.id.calend);
         date = findViewById(R.id.date);
 
+
         cv.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView calendarView, int i, int i1, int i2) {
