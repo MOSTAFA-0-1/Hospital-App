@@ -29,14 +29,22 @@ public class popular_Adpter1 extends RecyclerView.Adapter<popular_Adpter1.ViewHo
         TextView textView3;
         ImageView imageView;
         RatingBar ratingBar;
+
         public ViewHolder(View view) {
             super(view);
             // Define click listener for the ViewHolder's View
             imageView = view.findViewById(R.id.p1doc_photo);
             textView1 = (TextView) view.findViewById(R.id.p1doc_name);
             textView2 = (TextView) view.findViewById(R.id.p1_doc_spec);
-            ratingBar = view.findViewById(R.id.ra1);
+            ratingBar=(RatingBar) view.findViewById(R.id.ra1) ;
 
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    provider.intentTo(view.getContext(),doctor_details.class,getLayoutPosition());
+                    System.out.println(getLayoutPosition());
+                }
+            });
 
         }
 
@@ -78,12 +86,6 @@ public class popular_Adpter1 extends RecyclerView.Adapter<popular_Adpter1.ViewHo
         viewHolder.getTextView1().setText(provider.doctors.get(position).getFirstName() + provider.doctors.get(position).getLastName());
         viewHolder.getTextView2().setText(provider.doctors.get(position).getSpecialty());
         viewHolder.imageView.setImageResource(images[position]);
-        viewHolder.ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
-            @Override
-            public void onRatingChanged(RatingBar ratingBar, float v, boolean b) {
-                System.out.println(v);
-            }
-        });
     }
 
     // Return the size of your dataset (invoked by the layout manager)
@@ -91,4 +93,5 @@ public class popular_Adpter1 extends RecyclerView.Adapter<popular_Adpter1.ViewHo
     public int getItemCount() {
         return provider.doctors.size();
     }
+    
 }

@@ -15,48 +15,46 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:background="@drawable/ronded_card"
             android:orientation="vertical">
 
             <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/p1doc_photo"
                 android:layout_width="130dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                android:id="@+id/p1doc_photo"
                 android:src="@drawable/pdoc3"></de.hdodenhof.circleimageview.CircleImageView>
 
             <TextView
+                android:id="@+id/p1doc_name"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:text="Dr.Truluck Nick"
-                android:id="@+id/p1doc_name"
                 android:textAlignment="center"
                 android:textSize="18dp"
                 android:textStyle="bold"></TextView>
 
             <TextView
+                android:id="@+id/p1_doc_spec"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:text="Medicine Specialist"
                 android:textAlignment="center"
-                android:id="@+id/p1_doc_spec"
                 android:textColor="@color/shadowgr"
                 android:textSize="12dp"
                 android:textStyle="bold"></TextView>
 
             <RatingBar
                 android:id="@+id/ra1"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
+                style="@style/foodRatingBar"
+                android:layout_width="110dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="20dp"
+                android:isIndicator="false"
                 android:numStars="5"
-                android:progressTint="#F6D060"
-                android:rating="4"
-                android:scaleX="0.5"
-                android:scaleY="0.5"
-                android:stepSize="0.5"
-                android:transformPivotX="13dp"
-                ></RatingBar>
+                android:rating="2"
+                android:stepSize="0.5" />
 
 
         </LinearLayout>

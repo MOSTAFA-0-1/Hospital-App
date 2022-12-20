@@ -22,7 +22,7 @@
                 android:layout_width="120dp"
                 android:layout_height="120dp"
                 android:layout_marginLeft="10dp"
-                app:srcCompat="@drawable/doc"></ImageView>
+                app:srcCompat="@drawable/backgroundimage"></ImageView>
 
             <LinearLayout
                 android:layout_width="525dp"
@@ -45,10 +45,16 @@
                     android:text="Upasana Dental Clinic, salt lake"
                     android:textSize="15sp"></TextView>
 
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/s"></ImageView>
+                <RatingBar
+                    android:id="@+id/ra4"
+                    style="@style/foodRatingBar"
+                    android:layout_marginStart="5dp"
+                    android:layout_width="110dp"
+                    android:layout_height="26dp"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:rating="3.5"
+                    android:stepSize="0.5" />
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
