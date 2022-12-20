@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -27,6 +28,7 @@ public class popular_Adpter1 extends RecyclerView.Adapter<popular_Adpter1.ViewHo
         TextView textView2;
         TextView textView3;
         ImageView imageView;
+        RatingBar ratingBar;
 
         public ViewHolder(View view) {
             super(view);
@@ -34,7 +36,8 @@ public class popular_Adpter1 extends RecyclerView.Adapter<popular_Adpter1.ViewHo
             imageView = view.findViewById(R.id.p1doc_photo);
             textView1 = (TextView) view.findViewById(R.id.p1doc_name);
             textView2 = (TextView) view.findViewById(R.id.p1_doc_spec);
-            textView3 = (TextView) view.findViewById(R.id.p1_doc_stars);
+            ratingBar=(RatingBar) view.findViewById(R.id.ra1) ;
+
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -90,4 +93,5 @@ public class popular_Adpter1 extends RecyclerView.Adapter<popular_Adpter1.ViewHo
     public int getItemCount() {
         return provider.doctors.size();
     }
+    
 }

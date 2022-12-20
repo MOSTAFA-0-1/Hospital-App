@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -30,15 +31,17 @@ public class popular_Adpter2 extends RecyclerView.Adapter<popular_Adpter2.ViewHo
         TextView textView4;
         TextView textView5;
         ImageView imageView;
+        RatingBar ratingBar;
         public ViewHolder(View view) {
             super(view);
             // Define click listener for the ViewHolder's View
             imageView = view.findViewById(R.id.docPhoto);
             textView1 = (TextView) view.findViewById(R.id.docName);
             textView2 = (TextView) view.findViewById(R.id.docSpec);
-            textView3 = (TextView) view.findViewById(R.id.stars);
+
             textView4 = (TextView) view.findViewById(R.id.rate);
             textView5 = (TextView) view.findViewById(R.id.views);
+            ratingBar= (RatingBar) view.findViewById(R.id.ra2);
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
