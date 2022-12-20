@@ -9,6 +9,7 @@
     tools:context=".Calendar">
 
   <CalendarView
+      android:id="@+id/calend"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_margin="10dp"></CalendarView>
@@ -140,7 +141,21 @@
     </Button>>
 
   </LinearLayout>
+
   </HorizontalScrollView>
+
+
+
+  <TextView
+      android:id="@+id/date"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:textAlignment="center"
+      android:textColor="@color/black"
+      android:textSize="18dp"
+      android:textStyle="bold"
+      android:text="" />
 </LinearLayout>
 
 
