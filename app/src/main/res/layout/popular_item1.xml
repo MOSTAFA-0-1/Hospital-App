@@ -49,7 +49,7 @@
                 android:id="@+id/ra1"
                 style="@style/foodRatingBar"
                 android:layout_width="110dp"
-                android:layout_height="26dp"
+                android:layout_height="25dp"
                 android:layout_marginStart="20dp"
                 android:isIndicator="false"
                 android:numStars="5"
