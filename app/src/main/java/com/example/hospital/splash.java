@@ -44,7 +44,7 @@ public class splash extends AppCompatActivity {
                 try {
                     sleep(4000);
 //                    System.out.println(provider.doctors.get(9).getFreeTime().get(0));
-                    Intent intent =new Intent(getApplicationContext(),calendar.class);
+                    Intent intent =new Intent(getApplicationContext(),home.class);
                     startActivity(intent);
                     finish();
 

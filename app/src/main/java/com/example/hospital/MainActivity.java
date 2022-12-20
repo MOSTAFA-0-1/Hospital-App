@@ -1,23 +1,16 @@
 package com.example.hospital;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageView;
+import android.view.MenuItem;
 import android.widget.TextView;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseAuthException;
-import com.google.firebase.firestore.FirebaseFirestore;
+import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.HashMap;
-import java.util.Map;
+import com.example.hospital.Fragment.FavFragment;
+import com.example.hospital.Fragment.HomeFragment;
+import com.example.hospital.Fragment.profileFragment;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 
 public class MainActivity extends AppCompatActivity {
 //    private static final String TAG = "";
@@ -27,12 +20,40 @@ public class MainActivity extends AppCompatActivity {
 //    FirebaseAuth auth = FirebaseAuth.getInstance();
 //    String emial = "";
 //    String password = "";
+
+    BottomNavigationView bottomNavigationView;
+    HomeFragment homeFragment = new HomeFragment();
+    FavFragment favFragment = new FavFragment();
+    com.example.hospital.Fragment.profileFragment profileFragment = new profileFragment();
+
 TextView gotosignin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        bottomNavigationView = findViewById(R.id.nav_button);
+        getSupportFragmentManager().beginTransaction().replace(R.id.container,homeFragment).commit();
+
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.navigation_home:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container,homeFragment).commit();
+                        return true;
+
+                    case R.id.navigation_Fav:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container,favFragment).commit();
+                        return true;
+
+                    case R.id.navigation_notifications:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container,profileFragment).commit();
+                        return true;
+                }
+                return false;
+            }
+        });
 //        gotosignin = findViewById(R.id.goToSignIn);
 //        gotosignin.setOnClickListener(new View.OnClickListener() {
 //            @Override
