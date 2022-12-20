@@ -2,6 +2,7 @@ package com.example.hospital.classes;
 
 import android.view.View;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,16 +16,18 @@ public class Doctor {
     int patientStories;
     double ratePrecent;
     String id;
-    List<String> freeTime = new ArrayList<>();
+//    List<String> freetimes = new ArrayList<>();
     List<String> worktimes = new ArrayList<>();
+   public List<String> freetimes = new ArrayList();
 
     public List<String> getFreeTime() {
-        return freeTime;
+        return freetimes;
     }
 
-    public void setFreeTime(List<String> freeTime) {
-        this.freeTime = freeTime;
-    }
+//
+//    public void setFreeTime(List<String> freeTime) {
+//        this.freetimes = freeTime;
+//    }
 
     public List<String> getWorktimes() {
         return worktimes;
