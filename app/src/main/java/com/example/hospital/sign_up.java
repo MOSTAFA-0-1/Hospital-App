@@ -34,6 +34,7 @@ public class sign_up extends AppCompatActivity {
     FirebaseAuth Auth = FirebaseAuth.getInstance();
     String password;
     String email2;
+
     LinearLayout google;
     private GoogleSignInClient client;
 

@@ -36,6 +36,7 @@ public class splash extends AppCompatActivity {
         provider.getData();
 
 
+
         Thread thread = new Thread(){
 
             @Override
