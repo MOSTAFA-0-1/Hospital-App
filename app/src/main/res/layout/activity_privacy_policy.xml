@@ -8,31 +8,6 @@
     android:orientation="vertical">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="61dp"
-        android:orientation="horizontal">
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="20dp"
-            android:layout_height="21.5555555556dp"
-            android:layout_marginStart="20dp"
-            android:background="@drawable/arrow_box_rotated"
-            tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:fontFamily="casual"
-            android:paddingStart="5dp"
-            android:paddingTop="16dp"
-            android:paddingEnd="0dp"
-            android:text="@string/privacyPolicy"
-            android:textColor="#000000"
-            android:textSize="20sp" />
-
-    </LinearLayout>
-
-    <LinearLayout
         android:layout_width="400dp"
         android:layout_gravity="center"
         android:layout_height="wrap_content"

@@ -152,17 +152,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="20dp"
-            android:backgroundTint="#0EBD7E"
-
-            android:drawableBottom="@drawable/bot1"
-            app:iconSize="30dp"
-            app:iconTintMode="add" />
-
         <TextView
             android:id="@+id/textView"
             android:layout_width="58dp"

@@ -12,15 +12,9 @@
 
         android:orientation="horizontal">
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="20dp"
-            android:layout_height="20.5555555556dp"
-            android:layout_marginStart="20dp"
-            android:background="@drawable/arrow_box_rotated"
-            tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
-
         <TextView
             android:layout_width="282dp"
+            android:layout_marginStart="20dp"
             android:layout_height="match_parent"
             android:fontFamily="casual"
             android:paddingStart="5dp"
