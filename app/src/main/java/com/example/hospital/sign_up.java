@@ -20,12 +20,15 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+
+import java.util.jar.Attributes;
 
 public class sign_up extends AppCompatActivity {
     TextView gotosignin;
@@ -42,12 +45,14 @@ public class sign_up extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+        provider.setUserName("nasr");
 //        FirebaseAuth.getInstance().signOut();
         gotosignin = findViewById(R.id.goToSignIn);
         button = findViewById(R.id.sinup);
 
         email = findViewById(R.id.userEmail);
         pass = findViewById(R.id.userPass);
+        userName = findViewById(R.id.userName);
 
         GoogleSignInOptions options = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
@@ -84,13 +89,23 @@ public class sign_up extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
                             System.out.println("success");
+//                            if (userName.getText().toString().isEmpty())
+//                             provider.setUserName(userName.getText().toString());
                             openActivaty(Patien_Detailes_2.class);
+
                         }
                         if(task.isCanceled())
                             Toast.makeText(getApplicationContext(), task.getException().getMessage(), Toast.LENGTH_LONG).show();
 
                     }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
+
+                    }
                 });
+
             }
 
         });
