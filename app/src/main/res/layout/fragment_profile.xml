@@ -72,27 +72,41 @@
             android:ems="10"
             android:hint="19/7"
             android:inputType="date" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
 
-        <EditText
-            android:id="@+id/editTextTextLcotion"
-            android:layout_width="340dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/location"
-            android:drawableRight="@drawable/endd"
-            android:ems="10"
-            android:hint="sad"
-            android:inputType="textPersonName" />
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="309dp"
-            android:layout_height="79dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:layout_marginLeft="60dp"
+            android:layout_marginStart="10dp"
             android:backgroundTint="#0EBE7F"
-            android:text="Continue" />
+            android:text="save"
+            android:textStyle="bold"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="#0EBE7F"
+            android:text="history"
+            android:textStyle="bold"></Button>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="#0EBE7F"
+                android:text="logout"
+                android:textStyle="bold"></Button>
+
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -162,6 +176,7 @@
             android:textColor="#FFFFFF"
             android:textSize="18dp"
             android:textStyle="bold" />
+
 
 
 
