@@ -63,7 +63,7 @@ boolean isMale = true;
                provider.intentTo(getApplicationContext(),MainActivity.class);
                 }
 
-            });
+                });
 
 
 
