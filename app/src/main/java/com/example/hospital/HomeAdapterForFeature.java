@@ -1,4 +1,4 @@
-package com.example.hospital.classes;
+package com.example.hospital;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,9 +8,6 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.example.hospital.R;
-import com.example.hospital.provider;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
