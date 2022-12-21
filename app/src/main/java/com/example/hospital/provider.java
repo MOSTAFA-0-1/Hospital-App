@@ -37,6 +37,10 @@ public class provider  extends AppCompatActivity {
         intent.putExtra("index",index);
         context.startActivity(intent);
     }
+    static  void intentTo(Context context,Class clas){
+        intent = new Intent(context,clas);
+        context.startActivity(intent);
+    }
     static FirebaseFirestore store = FirebaseFirestore.getInstance();
 
    static    void addDoctor(String firstName,String lastName,String price,String specialty,
@@ -75,6 +79,7 @@ public class provider  extends AppCompatActivity {
           return store.collection("users");
     }
 
+   static User lastUser;
     static void setUserName(String name){
         Map<String,Object> userName = new HashMap<>();
         String id2 ;
@@ -85,19 +90,28 @@ public class provider  extends AppCompatActivity {
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                 for (QueryDocumentSnapshot  document : queryDocumentSnapshots){
                     User user = document.toObject(User.class);
+                    lastUser = user;
                     if (user.getId() == null){
                     String id = document.getId();
                     userName.put("id",id);
                     usersRef().document(id).update(userName);}
                 }
+                System.out.println(lastUser.getName());
             }
         });
+}
+    static void setUserData(String name,String age , boolean isMale , String phonenum) {
+        Map<String, Object> user = new HashMap<>();
+        user.put("Name",name);
+        user.put("age",age);
+        if (isMale)
+            user.put("gender","Male");
+        else
+            user.put("gender","FeMale");
+        user.put("number",phonenum);
 
-
-
-
+        usersRef().document(lastUser.getId()).update(user);
 
     }
-
 //
 }

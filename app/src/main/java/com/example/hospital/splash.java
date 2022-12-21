@@ -36,7 +36,7 @@ public class splash extends AppCompatActivity {
         provider.getData();
 
 
-
+        provider.setUserName("Ahmed");
         Thread thread = new Thread(){
 
             @Override

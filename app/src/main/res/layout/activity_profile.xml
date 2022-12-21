@@ -73,17 +73,7 @@
             android:hint="19/7"
             android:inputType="date" />
 
-        <EditText
-            android:id="@+id/editTextTextLcotion"
-            android:layout_width="340dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/location"
-            android:drawableRight="@drawable/endd"
-            android:ems="10"
-            android:hint="sad"
-            android:inputType="textPersonName" />
+
 
         <Button
             android:id="@+id/button2"
@@ -152,22 +142,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="20dp"
-            android:backgroundTint="#0EBD7E"
-
-            android:drawableBottom="@drawable/bot1"
-            app:iconSize="30dp"
-            app:iconTintMode="add" />
-
         <TextView
             android:id="@+id/textView"
             android:layout_width="58dp"
-            android:layout_height="21dp"
-            android:layout_marginStart="12dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="26dp"
             android:text="Profile"
             android:textColor="#FFFFFF"
