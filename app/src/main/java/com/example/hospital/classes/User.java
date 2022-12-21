@@ -4,9 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class User {
-    String Name,status,number,age,id,gender;
+    String Name,status,number,age,id,gender,uid,time;
     public List<Doctor> favouriteDoctors = new ArrayList<Doctor>();
     public List<Doctor> bookedDoctors = new ArrayList<Doctor>();
+
+    public String getTime() {
+        return time;
+    }
+
+    public String getUid() {
+        return uid;
+    }
 
     public String getGender() {
         return gender;

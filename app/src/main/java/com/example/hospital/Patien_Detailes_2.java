@@ -59,8 +59,16 @@ boolean isMale = true;
                     if (!Name.getText().toString().isEmpty() && !AGE.getEditText().getText().toString().isEmpty()
                             && !number.getText().toString().isEmpty()
                     )
-                    {provider.setUserData(Name.getText().toString(),AGE.getEditText().getText().toString(),isMale,number.getText().toString());}
-               provider.intentTo(getApplicationContext(),MainActivity.class);
+                    {
+                        provider.setUserData(Name.getText().toString(), AGE.getEditText().getText().toString()
+                                , isMale, number.getText().toString(), new provider.FireStoreubload() {
+                                    @Override
+                                    public void ubloded() {
+                                        provider.intentTo(Patien_Detailes_2.this,MainActivity.class);
+                                    }
+                                });
+                    }
+
                 }
 
                 });

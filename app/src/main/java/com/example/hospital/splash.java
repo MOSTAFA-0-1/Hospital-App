@@ -36,7 +36,7 @@ public class splash extends AppCompatActivity {
         provider.getData();
 
 
-        provider.setUserName("Ahmed");
+
         Thread thread = new Thread(){
 
             @Override
@@ -46,7 +46,7 @@ public class splash extends AppCompatActivity {
                     sleep(4000);
 //                    System.out.println(provider.doctors.get(9).getFreeTime().get(0));
 //                    provider.setUserName("nasr");
-                    Intent intent =new Intent(getApplicationContext(),MainActivity.class);
+                    Intent intent =new Intent(getApplicationContext(),sign_up.class);
                     startActivity(intent);
                     finish();
 

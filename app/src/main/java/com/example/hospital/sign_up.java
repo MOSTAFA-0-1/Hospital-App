@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.hospital.classes.User;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -91,11 +92,22 @@ public class sign_up extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
                             System.out.println("success");
-                            if (userName.getText().toString().isEmpty())
-                             provider.setUserName(userName.getText().toString());
+
+                            if (!userName.getText().toString().isEmpty())
+                             provider.setUserName(userName.getText().toString(), new provider.FireStoreCallBack() {
+                                 @Override
+                                 public void callBack(User user) {
+                                     openActivaty(Patien_Detailes_2.class);
+                                 }
+                             });
                             else
-                                provider.setUserName("");
-                            openActivaty(Patien_Detailes_2.class);
+                                provider.setUserName("",new provider.FireStoreCallBack() {
+                                    @Override
+                                    public void callBack(User user) {
+                                        openActivaty(Patien_Detailes_2.class);
+                                    }
+                                });
+
 
                         }
                         if(task.isCanceled())

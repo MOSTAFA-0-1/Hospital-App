@@ -24,14 +24,16 @@ import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class provider  extends AppCompatActivity {
    static FirebaseAuth auth = FirebaseAuth.getInstance();
-
+  static     SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
     static Intent intent;
     static  void intentTo(Context context,Class clas,int index){
         intent = new Intent(context,clas);
@@ -76,18 +78,21 @@ public class provider  extends AppCompatActivity {
            });
           }
 
+   static     Date date = new Date();
     static CollectionReference usersRef(){
           return store.collection("users");
     }
 
    static User lastUser;
-    static void setUserName(String name){
+    static void setUserName(String name,FireStoreCallBack fire){
         Map<String,Object> userName = new HashMap<>();
         String id2 ;
         userName.put("Name",name);
+        String dat = formatter.format(date);
+        userName.put("time",dat);
          usersRef().add(userName);
          userName.put("uid",auth.getUid());
-        store.collection("users").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+        store.collection("users").orderBy("time").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                 for (QueryDocumentSnapshot  document : queryDocumentSnapshots){
@@ -96,13 +101,15 @@ public class provider  extends AppCompatActivity {
                     if (user.getId() == null){
                     String id = document.getId();
                     userName.put("id",id);
-                    usersRef().document(id).update(userName);}
+                    usersRef().document(id).update(userName);
+                    }
+                    fire.callBack(lastUser);
                 }
                 System.out.println(lastUser.getName());
             }
         });
 }
-    static void setUserData(String name,String age , boolean isMale , String phonenum) {
+    static void setUserData(String name,String age , boolean isMale , String phonenum,FireStoreubload fire) {
         Map<String, Object> user = new HashMap<>();
         user.put("Name",name);
         user.put("age",age);
@@ -113,7 +120,30 @@ public class provider  extends AppCompatActivity {
         user.put("number",phonenum);
 
         usersRef().document(lastUser.getId()).update(user);
+        fire.ubloded();
 
     }
-//
+    static void getUserData(FireStoreCallBack fire){
+        usersRef().get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+            @Override
+            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                for (QueryDocumentSnapshot  document : queryDocumentSnapshots){
+                    User user = document.toObject(User.class);
+                    if (user.getId() == auth.getUid()){
+                        lastUser = user;
+                        fire.callBack(lastUser);
+                        break;
+                    }
+
+                        }
+            }
+        });
+    }
+    interface  FireStoreCallBack{
+        void callBack(User user);
+    }
+    interface  FireStoreubload{
+        void ubloded();
+    }
+
 }

@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.hospital.classes.User;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -85,6 +86,13 @@ public class LogIn extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()){
                                     System.out.println("success");
+                                    provider.getUserData(new provider.FireStoreCallBack() {
+                                        @Override
+                                        public void callBack(User user) {
+                                            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                            startActivity(intent);
+                                        }
+                                    });
                                     openActivaty(MainActivity.class);
                                 }
                                 if(task.isCanceled())
@@ -145,8 +153,14 @@ public class LogIn extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
-                                    Intent intent = new Intent(getApplicationContext(), Patien_Detailes_2.class);
-                                    startActivity(intent);
+                                    provider.getUserData(new provider.FireStoreCallBack() {
+                                        @Override
+                                        public void callBack(User user) {
+                                            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                            startActivity(intent);
+                                        }
+                                    });
+
 
                                 } else {
 //                                    Toast.makeText(this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
