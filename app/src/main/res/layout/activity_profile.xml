@@ -73,17 +73,7 @@
             android:hint="19/7"
             android:inputType="date" />
 
-        <EditText
-            android:id="@+id/editTextTextLcotion"
-            android:layout_width="340dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/location"
-            android:drawableRight="@drawable/endd"
-            android:ems="10"
-            android:hint="sad"
-            android:inputType="textPersonName" />
+
 
         <Button
             android:id="@+id/button2"

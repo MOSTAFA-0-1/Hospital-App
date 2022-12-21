@@ -51,7 +51,7 @@ boolean isMale = true;
                             && !number.getText().toString().isEmpty()
                     )
                     provider.setUserData(Name.getText().toString(),age.getText().toString(),isMale,number.getText().toString());
-               provider.intentTo(getApplicationContext(),MainActivity.class);
+               provider.intentTo(Patien_Detailes_2.this,MainActivity.class);
                 }
             });
 
