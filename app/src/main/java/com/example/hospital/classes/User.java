@@ -4,9 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class User {
-    String Name,status,number,birthDay,id;
+    String Name,status,number,age,id,gender;
     public List<Doctor> favouriteDoctors = new ArrayList<Doctor>();
     public List<Doctor> bookedDoctors = new ArrayList<Doctor>();
+
+    public String getGender() {
+        return gender;
+    }
 
     public String getId() {
         return id;
@@ -40,11 +44,11 @@ public class User {
         this.number = number;
     }
 
-    public String getBirthDay() {
-        return birthDay;
+    public String getage() {
+        return age;
     }
 
-    public void setBirthDay(String birthDay) {
-        this.birthDay = birthDay;
+    public void setage(String age) {
+        this.age = age;
     }
 }
