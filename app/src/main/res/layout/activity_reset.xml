@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="550dp"
     android:background="@drawable/photo_2022_11_05_19_06_24"
     android:orientation="vertical"
     tools:context=".Reset">
@@ -29,8 +29,8 @@
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="394dp"
-        android:layout_height="88dp"
+        android:layout_width="wrap_content"
+        android:layout_height="96dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="65dp"
@@ -83,7 +83,7 @@
         app:layout_constraintVertical_bias="0.486" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/update"
         android:layout_width="173dp"
         android:layout_height="63dp"
         android:layout_marginLeft="115dp"

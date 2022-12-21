@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -46,7 +47,7 @@ public class LogIn extends AppCompatActivity {
 
 
         GoogleSignInOptions options = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.default_web_client_id))
+              //  .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
                 .build();
         client = GoogleSignIn.getClient(this,options);
@@ -115,7 +116,51 @@ public class LogIn extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 //            showBottomSheetDialog();
-                openActivaty(code.class);
+//                openActivaty(code.class);
+                Dialog dialog = new Dialog(LogIn.this);
+                dialog.setContentView(R.layout.activity_forgot);
+                dialog.setCancelable(false);
+                Button email = dialog.findViewById(R.id.email);
+                dialog.show();
+
+                email.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Toast.makeText(LogIn.this, "email" , Toast.LENGTH_SHORT).show();
+                        if (dialog.isShowing()){
+                            dialog.dismiss();
+                            Dialog dialog = new Dialog(LogIn.this);
+                            dialog.setContentView(R.layout.activity_digits);
+                            dialog.setCancelable(false);
+                            Button reset = dialog.findViewById(R.id.nextSheet);
+                            dialog.show();
+
+                            reset.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    Toast.makeText(LogIn.this, "reset" , Toast.LENGTH_SHORT).show();
+                                    if (dialog.isShowing()){
+                                        dialog.dismiss();
+                                        Dialog dialog = new Dialog(LogIn.this);
+                                        dialog.setContentView(R.layout.activity_reset);
+                                        dialog.setCancelable(false);
+                                        Button update = dialog.findViewById(R.id.update);
+                                        dialog.show();
+
+                                        update.setOnClickListener(new View.OnClickListener() {
+                                            @Override
+                                            public void onClick(View view) {
+                                                Toast.makeText(LogIn.this, "email" , Toast.LENGTH_SHORT).show();
+                                                if (dialog.isShowing()){
+                                                    dialog.dismiss();}
+                                            }
+                                        });
+                                    }
+                                }
+                            });
+                        }
+                    }
+                });
             }
         });
 
