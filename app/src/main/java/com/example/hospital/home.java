@@ -17,8 +17,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.hospital.classes.HomeAdapterForFeature;
-import com.example.hospital.classes.HomeAdapterForPopular;
+import com.example.hospital.HomeAdapterForFeature;
+import com.example.hospital.HomeAdapterForPopular;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 

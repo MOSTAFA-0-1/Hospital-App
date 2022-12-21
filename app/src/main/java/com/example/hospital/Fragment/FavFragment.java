@@ -10,8 +10,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.hospital.R;
-import com.example.hospital.classes.HomeAdapterForPopular;
-import com.example.hospital.classes.favourite_Adaptor2;
+import com.example.hospital.favourite_Adaptor2;
+
 
 public class FavFragment extends Fragment {
 

@@ -31,7 +31,12 @@ TextView gotosignin;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        provider.getUserById(new provider.FireStoreubload() {
+            @Override
+            public void ubloded() {
 
+            }
+        });
         bottomNavigationView = findViewById(R.id.nav_button);
         getSupportFragmentManager().beginTransaction().replace(R.id.container,homeFragment).commit();
 

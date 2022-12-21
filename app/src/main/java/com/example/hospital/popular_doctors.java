@@ -14,7 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 
-import com.example.hospital.classes.RecAdapter;
+import com.example.hospital.RecAdapter;
 import com.google.android.material.navigation.NavigationView;
 
 public class popular_doctors extends AppCompatActivity {

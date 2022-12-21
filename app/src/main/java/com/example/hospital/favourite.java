@@ -14,7 +14,6 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 
-import com.example.hospital.classes.favourite_Adaptor2;
 import com.google.android.material.navigation.NavigationView;
 
 public class favourite extends AppCompatActivity {

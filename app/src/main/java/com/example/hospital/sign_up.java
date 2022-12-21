@@ -97,6 +97,7 @@ public class sign_up extends AppCompatActivity {
                              provider.setUserName(userName.getText().toString(), new provider.FireStoreCallBack() {
                                  @Override
                                  public void callBack(User user) {
+                                     System.out.println("successssssssssss");
                                      openActivaty(Patien_Detailes_2.class);
                                  }
                              });
@@ -104,6 +105,7 @@ public class sign_up extends AppCompatActivity {
                                 provider.setUserName("",new provider.FireStoreCallBack() {
                                     @Override
                                     public void callBack(User user) {
+
                                         openActivaty(Patien_Detailes_2.class);
                                     }
                                 });

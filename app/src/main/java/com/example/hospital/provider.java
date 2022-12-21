@@ -17,6 +17,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.api.core.ApiFuture;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
@@ -82,6 +83,7 @@ public class provider  extends AppCompatActivity {
     static CollectionReference usersRef(){
           return store.collection("users");
     }
+   static String id;
 
    static User lastUser;
     static void setUserName(String name,FireStoreCallBack fire){
@@ -92,20 +94,22 @@ public class provider  extends AppCompatActivity {
         userName.put("time",dat);
          usersRef().add(userName);
          userName.put("uid",auth.getUid());
-        store.collection("users").orderBy("time").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+        store.collection("users").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                 for (QueryDocumentSnapshot  document : queryDocumentSnapshots){
                     User user = document.toObject(User.class);
                     lastUser = user;
                     if (user.getId() == null){
-                    String id = document.getId();
+                     id = document.getId();
                     userName.put("id",id);
                     usersRef().document(id).update(userName);
+                        System.out.println(lastUser.getName());
                     }
-                    fire.callBack(lastUser);
+                     fire.callBack(lastUser);
+
                 }
-                System.out.println(lastUser.getName());
+
             }
         });
 }
@@ -118,10 +122,20 @@ public class provider  extends AppCompatActivity {
         else
             user.put("gender","FeMale");
         user.put("number",phonenum);
-
-        usersRef().document(lastUser.getId()).update(user);
+        System.out.println(lastUser.getId());
+        usersRef().document(id).update(user);
         fire.ubloded();
 
+    }
+  static   void  getUserById(FireStoreubload fire){
+        usersRef().document(id).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot document) {
+                User user = document.toObject(User.class);
+                lastUser = user;
+                fire.ubloded();
+            }
+        });
     }
     static void getUserData(FireStoreCallBack fire){
         usersRef().get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
@@ -134,6 +148,7 @@ public class provider  extends AppCompatActivity {
                         fire.callBack(lastUser);
                         break;
                     }
+
 
                         }
             }

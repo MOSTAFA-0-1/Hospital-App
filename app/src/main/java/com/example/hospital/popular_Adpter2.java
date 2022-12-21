@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.hospital.classes.RecAdapter;
+import com.example.hospital.RecAdapter;
 
 public class popular_Adpter2 extends RecyclerView.Adapter<popular_Adpter2.ViewHolder>{
 
