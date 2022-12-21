@@ -45,7 +45,7 @@ public class sign_up extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-        provider.setUserName("nasr");
+
 //       Auth.getUid();
 
 //        FirebaseAuth.getInstance().signOut();
@@ -91,8 +91,10 @@ public class sign_up extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
                             System.out.println("success");
-//                            if (userName.getText().toString().isEmpty())
-//                             provider.setUserName(userName.getText().toString());
+                            if (userName.getText().toString().isEmpty())
+                             provider.setUserName(userName.getText().toString());
+                            else
+                                provider.setUserName("");
                             openActivaty(Patien_Detailes_2.class);
 
                         }

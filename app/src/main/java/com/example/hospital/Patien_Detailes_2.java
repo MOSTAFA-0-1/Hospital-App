@@ -56,10 +56,10 @@ boolean isMale = true;
             Continue.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if (!Name.getText().toString().isEmpty() && !AGE.getEditText().toString().isEmpty()
+                    if (!Name.getText().toString().isEmpty() && !AGE.getEditText().getText().toString().isEmpty()
                             && !number.getText().toString().isEmpty()
                     )
-                    {provider.setUserData(Name.getText().toString(),AGE.getEditText().toString(),isMale,number.getText().toString());}
+                    {provider.setUserData(Name.getText().toString(),AGE.getEditText().getText().toString(),isMale,number.getText().toString());}
                provider.intentTo(getApplicationContext(),MainActivity.class);
                 }
 

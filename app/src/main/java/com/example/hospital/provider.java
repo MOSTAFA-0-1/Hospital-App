@@ -15,6 +15,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.api.core.ApiFuture;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -29,7 +30,7 @@ import java.util.List;
 import java.util.Map;
 
 public class provider  extends AppCompatActivity {
-    FirebaseFirestore store2 = FirebaseFirestore.getInstance();
+   static FirebaseAuth auth = FirebaseAuth.getInstance();
 
     static Intent intent;
     static  void intentTo(Context context,Class clas,int index){
@@ -85,6 +86,7 @@ public class provider  extends AppCompatActivity {
         String id2 ;
         userName.put("Name",name);
          usersRef().add(userName);
+         userName.put("uid",auth.getUid());
         store.collection("users").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
