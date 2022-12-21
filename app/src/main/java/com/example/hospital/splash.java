@@ -46,7 +46,7 @@ public class splash extends AppCompatActivity {
                     sleep(4000);
 //                    System.out.println(provider.doctors.get(9).getFreeTime().get(0));
 //                    provider.setUserName("nasr");
-                    Intent intent =new Intent(getApplicationContext(),LogIn.class);
+                    Intent intent =new Intent(getApplicationContext(),MainActivity.class);
                     startActivity(intent);
                     finish();
 

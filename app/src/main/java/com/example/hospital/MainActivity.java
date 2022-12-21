@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.hospital.Fragment.FavFragment;
 import com.example.hospital.Fragment.HomeFragment;
-import com.example.hospital.Fragment.profileFragment;
+import com.example.hospital.profileFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
     HomeFragment homeFragment = new HomeFragment();
     FavFragment favFragment = new FavFragment();
-    com.example.hospital.Fragment.profileFragment profileFragment = new profileFragment();
+    com.example.hospital.profileFragment profileFragment = new profileFragment();
 
 TextView gotosignin;
     @Override

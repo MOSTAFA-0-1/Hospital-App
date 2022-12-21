@@ -46,6 +46,8 @@ public class sign_up extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
         provider.setUserName("nasr");
+//       Auth.getUid();
+
 //        FirebaseAuth.getInstance().signOut();
         gotosignin = findViewById(R.id.goToSignIn);
         button = findViewById(R.id.sinup);
