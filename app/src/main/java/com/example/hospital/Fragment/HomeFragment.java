@@ -1,5 +1,6 @@
 package com.example.hospital.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -16,9 +17,11 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.hospital.FindDoctor;
 import com.example.hospital.R;
 import com.example.hospital.classes.HomeAdapterForFeature;
 import com.example.hospital.classes.HomeAdapterForPopular;
+import com.example.hospital.popular_doctors;
 import com.google.android.material.navigation.NavigationView;
 
 
@@ -50,6 +53,29 @@ public class HomeFragment extends Fragment {
         adapterForHomeActivityPop = new HomeAdapterForPopular(view.getContext(),images);
         popularDoctorsRecyclerView.setLayoutManager(new LinearLayoutManager(view.getContext(),RecyclerView.HORIZONTAL,true));
         popularDoctorsRecyclerView.setAdapter(adapterForHomeActivityPop);
+
+        featuredDoctorsRecyclerView = (RecyclerView) view.findViewById(R.id.recyclerFeatDoctor);
+        adapterForHomeActivityFeat = new HomeAdapterForFeature(view.getContext(),images);
+        featuredDoctorsRecyclerView.setLayoutManager(new LinearLayoutManager(view.getContext(),RecyclerView.HORIZONTAL,true));
+        featuredDoctorsRecyclerView.setAdapter(adapterForHomeActivityPop);
+
+        go =(Button) view.findViewById(R.id.button7);
+        go.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getContext(), popular_doctors.class);
+                startActivity(i);
+            }
+        });
+
+        go1 =(Button) view.findViewById(R.id.button70);
+        go1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getContext(), FindDoctor.class);
+                startActivity(i);
+            }
+        });
         return view;
     }
 
