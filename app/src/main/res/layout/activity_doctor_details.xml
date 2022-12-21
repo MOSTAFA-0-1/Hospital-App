@@ -15,19 +15,10 @@
             android:layout_width="match_parent"
             android:layout_height="63dp"
             android:orientation="horizontal">
-            <Button
-                android:id="@+id/button"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:backgroundTint="#00D3B7B7"
 
-                android:drawableBottom="@drawable/bot1"
-                app:iconSize="30dp"
-                app:iconTintMode="add" />
             <TextView
                 android:id="@+id/textView"
+                android:layout_marginStart="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
