@@ -48,14 +48,22 @@ public class sign_up extends AppCompatActivity {
         email = findViewById(R.id.userEmail);
         pass = findViewById(R.id.userPass);
 
-        google = findViewById(R.id.google);
-
-
         GoogleSignInOptions options = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
                 .build();
         client = GoogleSignIn.getClient(this,options);
+
+        google = findViewById(R.id.google);
+        google.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = client.getSignInIntent();
+                startActivityForResult(i,1234);
+            }
+        });
+
+
 
 
         button.setOnClickListener(new View.OnClickListener() {
@@ -76,12 +84,9 @@ public class sign_up extends AppCompatActivity {
                         if (task.isSuccessful()){
                             System.out.println("success");
                             openActivaty(Patien_Detailes_2.class);
-                        }else
-                        if (email2.isEmpty())
-                            System.out.println("e is null");
-                        if (password.isEmpty())
-                            System.out.println("pass is null");
-                        System.out.println(task.getException());
+                        }
+                        if(task.isCanceled())
+                            Toast.makeText(getApplicationContext(), task.getException().getMessage(), Toast.LENGTH_LONG).show();
 
                     }
                 });
@@ -89,13 +94,7 @@ public class sign_up extends AppCompatActivity {
 
         });
 
-        google.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = client.getSignInIntent();
-                startActivityForResult(i,1234);
-            }
-        });
+
 
 
 
