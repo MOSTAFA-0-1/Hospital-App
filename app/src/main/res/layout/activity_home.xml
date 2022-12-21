@@ -11,7 +11,7 @@
 
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_height="50dp"
         app:menu="@menu/drawer_menu"
         app:headerLayout="@layout/header_drawer"
         android:id="@+id/nav_view"
@@ -208,8 +208,8 @@
                 </LinearLayout>
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
                     android:id="@+id/recyclerPopDoctor"/>
 
                 <LinearLayout
@@ -247,9 +247,8 @@
                     android:layout_marginTop="12dp">
 
                     <androidx.recyclerview.widget.RecyclerView
-                        android:layout_width="wrap_content"
-                        android:layout_height="300dp"
-
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
                         android:id="@+id/recyclerFeatDoctor"/>
                 </HorizontalScrollView>
 
@@ -258,46 +257,7 @@
             </LinearLayout>
         </ScrollView>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
 
-
-            <Button
-                android:id="@+id/homepage"
-                android:layout_width="70dp"
-                android:layout_height="50dp"
-                android:layout_margin="18dp"
-                android:layout_weight="1"
-                android:background="@drawable/home" />
-
-            <Button
-                android:id="@+id/button87"
-                android:layout_width="80dp"
-                android:layout_height="60dp"
-                android:layout_margin="18dp"
-                android:layout_weight="1"
-                android:background="@drawable/book" />
-
-            <Button
-                android:id="@+id/favoritedoc"
-                android:layout_width="65dp"
-                android:layout_height="45dp"
-                android:layout_margin="18dp"
-                android:layout_weight="1"
-                android:background="@drawable/fav" />
-
-            <Button
-                android:id="@+id/button88"
-                android:layout_width="65dp"
-                android:layout_height="45dp"
-                android:layout_margin="18dp"
-                android:layout_weight="1"
-                android:background="@drawable/mas" />
-
-        </LinearLayout>
     </LinearLayout>
 
 </androidx.drawerlayout.widget.DrawerLayout>
