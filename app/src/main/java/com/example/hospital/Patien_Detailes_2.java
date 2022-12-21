@@ -62,6 +62,7 @@ boolean isMale = true;
                     {provider.setUserData(Name.getText().toString(),AGE.getEditText().toString(),isMale,number.getText().toString());}
                provider.intentTo(getApplicationContext(),MainActivity.class);
                 }
+
             });
 
 
