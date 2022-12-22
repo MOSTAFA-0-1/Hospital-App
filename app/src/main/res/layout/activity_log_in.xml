@@ -99,7 +99,7 @@
             android:padding="5dp"
             android:ems="10"
             android:hint="E-mail"
-            android:inputType="textPassword"
+            android:inputType="textPersonName"
             android:background="@drawable/ronded_card"/>
 
         <EditText
@@ -111,7 +111,7 @@
             android:padding="5dp"
             android:ems="10"
             android:hint="Passowrd"
-            android:inputType="textPersonName"
+            android:inputType="textPassword"
             android:background="@drawable/ronded_card"/>
     >
 

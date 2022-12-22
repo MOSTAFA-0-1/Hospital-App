@@ -18,9 +18,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.hospital.FindDoctor;
-import com.example.hospital.R;
 import com.example.hospital.HomeAdapterForFeature;
 import com.example.hospital.HomeAdapterForPopular;
+import com.example.hospital.R;
 import com.example.hospital.popular_doctors;
 import com.google.android.material.navigation.NavigationView;
 
