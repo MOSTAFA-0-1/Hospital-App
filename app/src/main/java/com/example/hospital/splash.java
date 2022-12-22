@@ -54,6 +54,7 @@ public class splash extends AppCompatActivity {
                     e.printStackTrace();
                 }
 
+
             }
         };
         thread.start();
