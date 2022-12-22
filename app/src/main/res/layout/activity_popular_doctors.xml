@@ -15,16 +15,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <androidx.appcompat.widget.SearchView
-            android:layout_width="350dp"
-            android:layout_height="50dp"
-            android:layout_margin="10dp"
-                android:id="@+id/searchV"
-            android:background="@drawable/ronded_card"
-            app:queryHint="Search here"
-            android:backgroundTint="@color/white">
 
-        </androidx.appcompat.widget.SearchView>
 
         </LinearLayout>
 
